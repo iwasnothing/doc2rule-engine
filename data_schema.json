@@ -1,0 +1,426 @@
+{
+  "Entity Profile System (EPS)": {
+    "fields": ["school_id", "school_category", "school_type", "district_type", "district_id", "RCDTS_code", "grades_offered", "parent_district", "public_private_indicator", "operational_status", "senate_district_code", "house_district_code"],
+    "used_by_rules": ["R001", "R002", "R003", "R042", "R049"]
+  },
+  "Student Information System (SIS)": {
+    "fields": ["student_id", "enrollment_id", "home_school_id", "serving_school_id", "enrollment_start_date", "enrollment_end_date", "exit_type_code", "grade_level", "PDA_percent_day_attendance"],
+    "used_by_rules": ["R001", "R002", "R003", "R013", "R014", "R015", "R016", "R018", "R019", "R020", "R026", "R029", "R031", "R032", "R042", "R043", "R044"]
+  },
+  "RCDTS code": {
+    "fields": ["region_code", "county_code", "district_code", "type_code", "school_code"],
+    "used_by_rules": ["R002", "R003", "R023", "R033"]
+  },
+  "SIS student demographics (race, gender)": {
+    "fields": ["race_ethnicity", "gender", "birth_date"],
+    "used_by_rules": ["R004", "R020", "R026", "R033"]
+  },
+  "Assessment Correction File": {
+    "fields": ["student_id", "enrollment_id", "assessment_type", "grade_at_testing", "race", "gender", "first_year_in_US_indicator", "EL_indicator", "IDEA_services_indicator", "alternate_assessment_indicator"],
+    "used_by_rules": ["R004", "R006", "R007", "R008", "R009", "R010", "R011"]
+  },
+  "Fall Enrollment Snapshot": {
+    "fields": ["student_id", "enrollment_id", "school_id", "district_id", "grade_level", "enrollment_date", "PDA", "FEEnrollment_flag", "snapshot_date"],
+    "used_by_rules": ["R004", "R026", "R032"]
+  },
+  "SIS IDEA Services (IEP) and 504 Plan records": {
+    "fields": ["student_id", "IEP_indicator", "504_plan_indicator", "fund_code", "IDEA_services_start_date", "IDEA_services_end_date"],
+    "used_by_rules": ["R004", "R020", "R029", "R041"]
+  },
+  "SIS EL status table": {
+    "fields": ["student_id", "EL_status", "EL_transition_status", "first_EL_date", "EL_exit_date", "ACCESS_composite_score"],
+    "used_by_rules": ["R004", "R006", "R007", "R008", "R009", "R010", "R011", "R027"]
+  },
+  "SIS Homeless table": {
+    "fields": ["student_id", "enrollment_id", "homeless_indicator", "school_year"],
+    "used_by_rules": ["R004", "R020"]
+  },
+  "DCFS file (Youth in Care)": {
+    "fields": ["student_id", "youth_in_care_indicator"],
+    "used_by_rules": ["R004", "R020"]
+  },
+  "SIS FRL indicator (Low Income)": {
+    "fields": ["student_id", "FRL_status", "low_income_indicator"],
+    "used_by_rules": ["R004", "R020", "R033"]
+  },
+  "SIS Migrant, Military, Private School flags": {
+    "fields": ["student_id", "migrant_indicator", "military_connected_indicator", "private_school_indicator"],
+    "used_by_rules": ["R004", "R020"]
+  },
+  "I-STAR Child Count": {
+    "fields": ["student_id", "district_id", "school_id", "child_count_date", "education_environment_code", "fund_code", "race_ethnicity", "disability_category", "age"],
+    "used_by_rules": ["R004", "R013", "R026", "R029"]
+  },
+  "Calculated metric values": {
+    "fields": ["metric_id", "entity_id", "entity_type", "numerator", "denominator", "percentage", "count", "metric_type_classification"],
+    "used_by_rules": ["R005"]
+  },
+  "Default grade range from School/District Type": {
+    "fields": ["entity_id", "school_type", "district_type", "default_grade_low", "default_grade_high"],
+    "used_by_rules": ["R005"]
+  },
+  "SIS Assessment Score records (IAR)": {
+    "fields": ["student_id", "enrollment_id", "score_id", "scale_score", "performance_level", "grade_at_testing", "subject", "RNVTA_code", "suppression_code", "test_date"],
+    "used_by_rules": ["R006", "R010", "R011"]
+  },
+  "SIS Assessment Score records (SAT)": {
+    "fields": ["student_id", "enrollment_id", "score_id", "scale_score_ELA", "scale_score_Math", "performance_level_ELA", "performance_level_Math", "grade_at_testing", "RNVTA_code", "suppression_code", "AccessTestCode", "ELA_participation_indicator", "Math_participation_indicator", "test_date"],
+    "used_by_rules": ["R006", "R008", "R011", "R035"]
+  },
+  "SIS Assessment Score records (ISA)": {
+    "fields": ["student_id", "enrollment_id", "score_id", "scale_score", "performance_level", "grade_at_testing", "subject", "RNVTA_code", "suppression_code", "test_date"],
+    "used_by_rules": ["R006", "R009", "R011"]
+  },
+  "SIS Assessment Score records (DLM-AA)": {
+    "fields": ["student_id", "enrollment_id", "score_id", "performance_level", "grade_at_testing", "subject", "RNVTA_code", "suppression_code", "test_date"],
+    "used_by_rules": ["R006", "R007", "R011"]
+  },
+  "First Year in U.S. School indicator": {
+    "fields": ["student_id", "first_year_in_US_flag", "EL_indicator"],
+    "used_by_rules": ["R006", "R007", "R008", "R009", "R010", "R011"]
+  },
+  "Student group classifications (from R004)": {
+    "fields": ["student_id", "all_students_flag", "gender", "race_ethnicity", "504_flag", "IEP_flag", "CWD_flag", "former_CWD_flag", "EL_flag", "former_EL_flag", "never_EL_flag", "low_income_flag", "homeless_flag", "migrant_flag", "youth_in_care_flag", "military_flag", "private_school_flag"],
+    "used_by_rules": ["R006", "R007", "R008", "R009", "R010", "R011"]
+  },
+  "Individual Student Growth Percentiles (SGP) from vendor file": {
+    "fields": ["student_id", "subject", "SGP_value", "SGP_type", "prior_year_scale_score", "current_year_scale_score"],
+    "used_by_rules": ["R010"]
+  },
+  "NAEP data": {
+    "fields": ["state", "district", "grade", "subject", "average_score", "achievement_level_percentages", "inclusion_rate_SD", "inclusion_rate_EL", "year"],
+    "used_by_rules": ["R012"]
+  },
+  "EdFacts submissions": {
+    "fields": ["district_id", "indicator_id", "numerator", "denominator", "value", "submission_date"],
+    "used_by_rules": ["R013"]
+  },
+  "Vendor survey data (SPP Indicator 8)": {
+    "fields": ["district_id", "respondent_count", "facilitated_involvement_count", "survey_year"],
+    "used_by_rules": ["R013"]
+  },
+  "External IEP compliance data (SPP Indicators 11–13)": {
+    "fields": ["district_id", "parental_consent_count", "evaluations_within_60_days_count", "Part_C_referral_count", "IEP_by_third_birthday_count", "secondary_transition_compliant_count"],
+    "used_by_rules": ["R013"]
+  },
+  "Post-school outcome survey (SPP Indicator 14)": {
+    "fields": ["district_id", "respondent_count", "enrolled_higher_ed_count", "competitively_employed_count", "other_employment_count"],
+    "used_by_rules": ["R013"]
+  },
+  "SIS Student Course Assignment": {
+    "fields": ["student_id", "enrollment_id", "state_course_id", "course_title", "section_id", "course_letter_grade", "course_credit", "term_type", "course_start_date", "course_end_date", "dual_credit_indicator", "articulated_credit_indicator", "IPEDS_identifier", "cooperative_education_indicator", "CIP_code"],
+    "used_by_rules": ["R014", "R015", "R016", "R035", "R036", "R041", "R046"]
+  },
+  "SIS State Course ID catalog": {
+    "fields": ["state_course_id", "state_course_title", "subject_area_code", "course_level", "AP_indicator", "IB_indicator", "enriched_honors_indicator", "fine_arts_indicator"],
+    "used_by_rules": ["R014", "R015", "R016", "R028", "R041"]
+  },
+  "Final letter grades": {
+    "fields": ["course_letter_grade", "grade_description", "passing_indicator"],
+    "used_by_rules": ["R014", "R015"]
+  },
+  "Illinois State Course System (ISCS)": {
+    "fields": ["state_course_id", "CIP_code", "group_id", "EFE_assignment_indicator", "cluster_name", "area_name", "program_name"],
+    "used_by_rules": ["R016"]
+  },
+  "CIP to Program Alignment Table": {
+    "fields": ["CIP_code", "program_name", "program_description", "cluster_name", "CCPE_area", "specific_fields_of_study"],
+    "used_by_rules": ["R016"]
+  },
+  "Retired CIP Crosswalk": {
+    "fields": ["current_CIP_code", "retired_CIP_code"],
+    "used_by_rules": ["R016"]
+  },
+  "Historic Course Group Crosswalk": {
+    "fields": ["state_course_id", "current_group", "current_CIP_code"],
+    "used_by_rules": ["R016"]
+  },
+  "NSC postsecondary data": {
+    "fields": ["student_id", "institution_name", "institution_level", "institution_type", "enrollment_begin_date", "enrollment_end_date", "enrollment_status_code", "graduation_date"],
+    "used_by_rules": ["R016", "R018"]
+  },
+  "IDES employment data": {
+    "fields": ["student_id", "employment_indicator", "employment_quarter", "employer_name"],
+    "used_by_rules": ["R016"]
+  },
+  "College Board AP data file": {
+    "fields": ["AI_code", "student_name", "grade", "exam_name", "exam_score", "exam_year"],
+    "used_by_rules": ["R017"]
+  },
+  "AI Code to RCDTS cross-reference table": {
+    "fields": ["AI_code", "RCDTS_code"],
+    "used_by_rules": ["R017"]
+  },
+  "National Student Clearinghouse (NSC) enrollment file": {
+    "fields": ["student_id", "institution_name", "institution_level", "institution_type", "enrollment_begin_date", "enrollment_end_date", "enrollment_status_code"],
+    "used_by_rules": ["R018"]
+  },
+  "NSC enrollment status codes": {
+    "fields": ["status_code", "status_description"],
+    "used_by_rules": ["R018"]
+  },
+  "SIS graduation data": {
+    "fields": ["student_id", "school_id", "district_id", "graduation_date", "exit_code", "school_year"],
+    "used_by_rules": ["R018", "R019", "R020"]
+  },
+  "Illinois Community College Board (ICCB) student file": {
+    "fields": ["student_id", "admin_ID", "institution_name", "course_id", "remedial_indicator", "subject_area", "credit_hours", "school_year"],
+    "used_by_rules": ["R019"]
+  },
+  "Illinois Board of Higher Education (IBHE) student file": {
+    "fields": ["student_id", "admin_ID", "institution_name", "course_id", "remedial_indicator", "subject_area", "academic_year"],
+    "used_by_rules": ["R019"]
+  },
+  "Common demographic data administrator ID": {
+    "fields": ["admin_ID", "student_id"],
+    "used_by_rules": ["R019"]
+  },
+  "Cohort entry year (first-time 9th graders)": {
+    "fields": ["student_id", "first_9th_grade_year", "cohort_year_4yr", "cohort_year_5yr", "cohort_year_6yr"],
+    "used_by_rules": ["R020"]
+  },
+  "Graduation cohort table": {
+    "fields": ["student_id", "cohort_year", "cohort_type", "school_id", "district_id", "exit_code", "ever_IEP", "ever_504", "ever_EL", "ever_homeless", "ever_youth_in_care"],
+    "used_by_rules": ["R020", "R032"]
+  },
+  "KIDS score file (UC BEAR)": {
+    "fields": ["student_id", "school_id", "d1_scaled_score", "d2_scaled_score", "d3_scaled_score", "race", "gender", "EL_indicator", "score_year"],
+    "used_by_rules": ["R021"]
+  },
+  "RNVTA exemption codes (KIDS)": {
+    "fields": ["exemption_code", "description", "participation_indicator"],
+    "used_by_rules": ["R021"]
+  },
+  "Cut scores for readiness by developmental area": {
+    "fields": ["scale_name", "beginning_of_K_cut_point", "end_of_K_cut_point", "readiness_measures_subset"],
+    "used_by_rules": ["R021"]
+  },
+  "Vendor files: 5Essentials (University of Chicago)": {
+    "fields": ["school_RCDTS", "student_response_count", "student_count", "student_response_rate", "teacher_response_count", "teacher_count", "teacher_response_rate", "effective_leaders_score", "collaborative_teachers_score", "supportive_environment_score", "ambitious_instruction_score", "involved_families_score"],
+    "used_by_rules": ["R022"]
+  },
+  "Vendor files: Cognia": {
+    "fields": ["school_RCDTS", "student_response_count", "student_count", "student_response_rate", "teacher_response_count", "teacher_count", "teacher_response_rate"],
+    "used_by_rules": ["R022"]
+  },
+  "Vendor files: CSCI": {
+    "fields": ["school_RCDTS", "student_response_count", "student_count", "student_response_rate", "teacher_response_count", "teacher_count", "teacher_response_rate"],
+    "used_by_rules": ["R022"]
+  },
+  "Non-participation codes (Climate Survey)": {
+    "fields": ["code", "description"],
+    "used_by_rules": ["R022"]
+  },
+  "University of Illinois IYS spreadsheet": {
+    "fields": ["school_RCDTS", "participation_indicator", "grade", "valid_survey_count"],
+    "used_by_rules": ["R023"]
+  },
+  "AFR spreadsheet from School Business Services": {
+    "fields": ["district_id", "expenditure_by_function", "revenue_by_source", "expenditure_by_fund", "total_expenditures", "total_revenue", "EAV", "tax_rate", "nine_month_ADA", "instructional_expenditure", "operating_expenditure", "fiscal_year"],
+    "used_by_rules": ["R024"]
+  },
+  "EBF calculation spreadsheets from State Funding and Forecasting": {
+    "fields": ["district_id", "tier", "adequacy_target", "percentage_of_adequacy", "local_capacity_target", "real_receipts", "final_resources", "fiscal_year"],
+    "used_by_rules": ["R025"]
+  },
+  "Enrollment dates and PDA (Percent Day Attendance)": {
+    "fields": ["enrollment_id", "enrollment_start_date", "enrollment_end_date", "PDA"],
+    "used_by_rules": ["R026", "R030"]
+  },
+  "FEEnrollment flag": {
+    "fields": ["enrollment_id", "FEEnrollment_indicator"],
+    "used_by_rules": ["R026"]
+  },
+  "ACCESS composite score, domain scores, and performance levels": {
+    "fields": ["student_id", "composite_score", "listening_score", "speaking_score", "reading_score", "writing_score", "performance_level", "test_year"],
+    "used_by_rules": ["R027"]
+  },
+  "First EL date for long-term EL determination": {
+    "fields": ["student_id", "first_EL_date", "years_as_EL"],
+    "used_by_rules": ["R027"]
+  },
+  "SIS accelerated codes (01–06)": {
+    "fields": ["student_id", "school_id", "district_id", "accelerated_type_code", "school_year"],
+    "used_by_rules": ["R028"]
+  },
+  "Gifted codes (01–05)": {
+    "fields": ["student_id", "gifted_code", "gifted_description"],
+    "used_by_rules": ["R028"]
+  },
+  "Teacher gifted endorsement": {
+    "fields": ["teacher_EIN", "gifted_endorsement_indicator"],
+    "used_by_rules": ["R028"]
+  },
+  "Education environment codes": {
+    "fields": ["code", "description", "EE_group"],
+    "used_by_rules": ["R029"]
+  },
+  "Fund codes": {
+    "fields": ["fund_code", "fund_description"],
+    "used_by_rules": ["R029"]
+  },
+  "School calendar (attendance codes)": {
+    "fields": ["school_id", "calendar_date", "attendance_code", "school_day_indicator", "total_school_days"],
+    "used_by_rules": ["R030"]
+  },
+  "SIS attendance records": {
+    "fields": ["student_id", "enrollment_id", "attendance_date", "attendance_type", "in_person_days", "elearning_days", "remote_days", "detention_days", "excused_absence_days", "unexcused_absence_days", "mental_health_days", "hospitalized_days", "medically_homebound_days"],
+    "used_by_rules": ["R030", "R035"]
+  },
+  "Enrollment exit codes": {
+    "fields": ["exit_type_code", "exit_type_description", "include_exclude_flag"],
+    "used_by_rules": ["R016", "R020", "R027", "R031", "R032"]
+  },
+  "Transfer in/out dates (Oct 1 – May 1)": {
+    "fields": ["student_id", "enrollment_id", "transfer_date", "transfer_direction"],
+    "used_by_rules": ["R031"]
+  },
+  "Fall Enrollment and End of Year snapshots": {
+    "fields": ["student_id", "enrollment_id", "school_id", "district_id", "grade_level", "snapshot_type", "snapshot_date"],
+    "used_by_rules": ["R032"]
+  },
+  "Prior year enrollment records": {
+    "fields": ["student_id", "prior_year_school_id", "prior_year_grade", "prior_year_exit_code"],
+    "used_by_rules": ["R032"]
+  },
+  "SIS Discipline tables": {
+    "fields": ["student_id", "school_id", "incident_id", "discipline_action_code", "incident_type_code", "duration_days", "incident_date"],
+    "used_by_rules": ["R033", "R038"]
+  },
+  "Discipline action codes (01–07)": {
+    "fields": ["action_code", "action_description"],
+    "used_by_rules": ["R033"]
+  },
+  "Incident type codes": {
+    "fields": ["incident_type_code", "incident_description"],
+    "used_by_rules": ["R033"]
+  },
+  "Year End Collection (YEC) database": {
+    "fields": ["school_id", "district_id", "average_PE_days_per_week", "truant_minor_count", "school_year", "YEC_reporting_indicator"],
+    "used_by_rules": ["R033", "R034"]
+  },
+  "Self-reported PE data from schools/districts": {
+    "fields": ["school_id", "average_PE_days_per_week_per_student"],
+    "used_by_rules": ["R034"]
+  },
+  "SIS Graduated students (exit code 06) at home school": {
+    "fields": ["student_id", "home_school_id", "graduation_date", "exit_code"],
+    "used_by_rules": ["R035"]
+  },
+  "CCRI Input Report": {
+    "fields": ["student_id", "GPA", "career_area_of_interest", "career_ready_indicator_count", "career_development_experience", "industry_credential", "ASVAB_score", "dual_credit_career_pathway", "program_of_study", "employment_months", "summer_employment", "community_service_hours", "co_curricular_activities_count"],
+    "used_by_rules": ["R035"]
+  },
+  "SAT/ACT scores (for CCRI)": {
+    "fields": ["student_id", "SAT_composite_score", "ACT_composite_score", "SAT_ELA_score", "SAT_Math_score", "ACT_ELA_score", "ACT_Math_score"],
+    "used_by_rules": ["R035"]
+  },
+  "SIS Course and grade data": {
+    "fields": ["student_id", "state_course_id", "course_letter_grade", "course_credit", "subject_area", "term_type"],
+    "used_by_rules": ["R035", "R037", "R038"]
+  },
+  "Program spreadsheet for Pathway Endorsement": {
+    "fields": ["student_id", "pathway_endorsement_indicator", "endorsement_type"],
+    "used_by_rules": ["R035"]
+  },
+  "SIS course enrollments (fine arts course codes)": {
+    "fields": ["student_id", "school_id", "state_course_id", "fine_arts_course_indicator"],
+    "used_by_rules": ["R036"]
+  },
+  "Teacher EIN and License/Endorsement codes (Arts, Music)": {
+    "fields": ["teacher_EIN", "license_endorsement_code", "endorsement_subject_code"],
+    "used_by_rules": ["R036", "R046"]
+  },
+  "Chronic absenteeism data (K–2)": {
+    "fields": ["student_id", "school_id", "grade_level", "total_absence_days", "total_attendance_days", "chronically_absent_indicator"],
+    "used_by_rules": ["R037"]
+  },
+  "Dual language program enrollment (EL K–2)": {
+    "fields": ["student_id", "school_id", "grade_level", "EL_status", "dual_language_program_indicator"],
+    "used_by_rules": ["R037"]
+  },
+  "3rd grade ELA course grades": {
+    "fields": ["student_id", "school_id", "ELA_course_letter_grade"],
+    "used_by_rules": ["R037"]
+  },
+  "5th grade math course grades": {
+    "fields": ["student_id", "school_id", "math_course_letter_grade"],
+    "used_by_rules": ["R038"]
+  },
+  "6th–8th grade course grades in core content": {
+    "fields": ["student_id", "school_id", "grade_level", "subject_area", "course_letter_grade"],
+    "used_by_rules": ["R038"]
+  },
+  "Summative Designation results": {
+    "fields": ["school_id", "designation_type", "designation_year"],
+    "used_by_rules": ["R039"]
+  },
+  "School improvement status from prior year": {
+    "fields": ["school_id", "prior_year_status", "status_year"],
+    "used_by_rules": ["R039"]
+  },
+  "Federal grant allocation data": {
+    "fields": ["school_id", "grant_type", "grant_amount", "fiscal_year"],
+    "used_by_rules": ["R039"]
+  },
+  "Electronic Grants Management System (eGMS)": {
+    "fields": ["school_id", "Title_I_allocation_amount", "Title_I_status_subtype", "fiscal_year"],
+    "used_by_rules": ["R040"]
+  },
+  "SIS section-level enrollments": {
+    "fields": ["section_id", "school_id", "state_course_id", "student_count", "IEP_student_count", "IEP_percent"],
+    "used_by_rules": ["R041"]
+  },
+  "Course codes (01–04, 51–54, 23)": {
+    "fields": ["subject_area_code", "subject_area_description"],
+    "used_by_rules": ["R041"]
+  },
+  "Course catalog (AP/IB, level codes)": {
+    "fields": ["state_course_id", "AP_indicator", "IB_indicator", "course_level_code"],
+    "used_by_rules": ["R028", "R041"]
+  },
+  "SBER system: per-pupil site-level and centralized expenditures": {
+    "fields": ["school_id", "district_id", "site_type", "per_pupil_expenditure", "centralized_expenditure", "total_expenditure", "enrollment_FTE", "fiscal_year"],
+    "used_by_rules": ["R042"]
+  },
+  "SIS current and prior year enrollment (fall)": {
+    "fields": ["student_id", "school_id", "grade_level", "enrollment_FTE", "school_year"],
+    "used_by_rules": ["R043"]
+  },
+  "EIS (Educator Information System)": {
+    "fields": ["teacher_EIN", "school_id", "district_id", "role_code", "FTE", "salary", "gender", "race_ethnicity", "education_level", "years_experience", "hire_date", "retention_indicator", "evaluation_rating", "license_type"],
+    "used_by_rules": ["R044", "R045", "R046", "R047"]
+  },
+  "Teacher evaluation data": {
+    "fields": ["teacher_EIN", "evaluation_year", "evaluation_rating", "proficient_or_excellent_indicator"],
+    "used_by_rules": ["R044"]
+  },
+  "Teacher attendance records": {
+    "fields": ["teacher_EIN", "school_id", "attendance_days", "absent_days", "attendance_rate"],
+    "used_by_rules": ["R044"]
+  },
+  "National Board for Professional Teaching Standards (NBPTS) certification list": {
+    "fields": ["teacher_EIN", "certification_status", "certification_area", "certification_expiry_date"],
+    "used_by_rules": ["R045"]
+  },
+  "ISBE endorsement-to-subject area mapping": {
+    "fields": ["endorsement_code", "subject_area_code", "subject_area_description"],
+    "used_by_rules": ["R046"]
+  },
+  "EIS administrator and support staff employment records": {
+    "fields": ["employee_EIN", "school_id", "district_id", "role_code", "role_description", "FTE", "salary", "gender", "race_ethnicity", "hire_date"],
+    "used_by_rules": ["R047"]
+  },
+  "Turnover tracking": {
+    "fields": ["school_id", "principal_EIN_current_year", "principal_EIN_prior_year", "turnover_indicator"],
+    "used_by_rules": ["R047"]
+  },
+  "CRDC data from U.S. Department of Education Office for Civil Rights (OCR)": {
+    "fields": ["school_id", "district_id", "in_school_suspension_count", "out_of_school_suspension_count", "expulsion_count", "school_related_arrest_count", "referral_to_law_enforcement_count", "chronic_absenteeism_count", "harassment_bullying_count", "race_ethnicity", "gender", "disability_indicator", "data_year"],
+    "used_by_rules": ["R048"]
+  },
+  "Senate and House district codes": {
+    "fields": ["entity_id", "senate_district_code", "house_district_code"],
+    "used_by_rules": ["R049"]
+  }
+}

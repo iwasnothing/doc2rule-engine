@@ -1,0 +1,3044 @@
+{
+  "Entity Profile System (EPS)": [
+    {
+      "school_id": "SCH30566785",
+      "school_category": 4,
+      "school_type": "High School",
+      "district_type": "High School",
+      "district_id": "D84594005",
+      "RCDTS_code": "920166154049764",
+      "grades_offered": "PK-12",
+      "parent_district": "D77582206",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "49",
+      "house_district_code": "18"
+    },
+    {
+      "school_id": "SCH34479434",
+      "school_category": 2,
+      "school_type": "Middle",
+      "district_type": "Middle",
+      "district_id": "D95593717",
+      "RCDTS_code": "330266461040705",
+      "grades_offered": "PK-12",
+      "parent_district": "D60617350",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "33",
+      "house_district_code": "113"
+    },
+    {
+      "school_id": "SCH76802237",
+      "school_category": 2,
+      "school_type": "Elementary",
+      "district_type": "Elementary",
+      "district_id": "D80085150",
+      "RCDTS_code": "280618982029485",
+      "grades_offered": "PK-12",
+      "parent_district": "D34403723",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "4",
+      "house_district_code": "108"
+    },
+    {
+      "school_id": "SCH75860080",
+      "school_category": 2,
+      "school_type": "Elementary",
+      "district_type": "Middle",
+      "district_id": "D78883037",
+      "RCDTS_code": "020170717027419",
+      "grades_offered": "PK-12",
+      "parent_district": "D37158697",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "5",
+      "house_district_code": "35"
+    },
+    {
+      "school_id": "SCH67624494",
+      "school_category": 2,
+      "school_type": "Middle",
+      "district_type": "Middle",
+      "district_id": "D37016517",
+      "RCDTS_code": "020925999048115",
+      "grades_offered": "PK-12",
+      "parent_district": "D04943298",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "33",
+      "house_district_code": "12"
+    },
+    {
+      "school_id": "SCH16681594",
+      "school_category": 4,
+      "school_type": "Unit District",
+      "district_type": "Unit District",
+      "district_id": "D76664128",
+      "RCDTS_code": "680729513040305",
+      "grades_offered": "PK-12",
+      "parent_district": "D52684050",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "16",
+      "house_district_code": "47"
+    },
+    {
+      "school_id": "SCH31303992",
+      "school_category": 4,
+      "school_type": "High School",
+      "district_type": "Unit District",
+      "district_id": "D17269052",
+      "RCDTS_code": "760625464020013",
+      "grades_offered": "PK-12",
+      "parent_district": "D43898269",
+      "public_private_indicator": "Private",
+      "operational_status": "Closed",
+      "senate_district_code": "55",
+      "house_district_code": "63"
+    },
+    {
+      "school_id": "SCH33579586",
+      "school_category": 8,
+      "school_type": "High School",
+      "district_type": "Unit District",
+      "district_id": "D44791004",
+      "RCDTS_code": "500676448020942",
+      "grades_offered": "PK-12",
+      "parent_district": "D69805735",
+      "public_private_indicator": "Public",
+      "operational_status": "Closed",
+      "senate_district_code": "40",
+      "house_district_code": "8"
+    },
+    {
+      "school_id": "SCH03767449",
+      "school_category": 2,
+      "school_type": "Elementary",
+      "district_type": "High School",
+      "district_id": "D11389532",
+      "RCDTS_code": "631026756025791",
+      "grades_offered": "PK-12",
+      "parent_district": "D01211676",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "32",
+      "house_district_code": "4"
+    },
+    {
+      "school_id": "SCH83459326",
+      "school_category": 8,
+      "school_type": "High School",
+      "district_type": "High School",
+      "district_id": "D16851453",
+      "RCDTS_code": "760887065085677",
+      "grades_offered": "PK-12",
+      "parent_district": "D10703141",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "4",
+      "house_district_code": "33"
+    },
+    {
+      "school_id": "SCH19638532",
+      "school_category": 4,
+      "school_type": "Elementary",
+      "district_type": "Unit District",
+      "district_id": "D18281732",
+      "RCDTS_code": "940965125082576",
+      "grades_offered": "PK-12",
+      "parent_district": "D90466038",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "56",
+      "house_district_code": "23"
+    },
+    {
+      "school_id": "SCH37706143",
+      "school_category": 8,
+      "school_type": "Unit District",
+      "district_type": "Middle",
+      "district_id": "D11163401",
+      "RCDTS_code": "470683602080481",
+      "grades_offered": "PK-12",
+      "parent_district": "D60212175",
+      "public_private_indicator": "Public",
+      "operational_status": "Closed",
+      "senate_district_code": "58",
+      "house_district_code": "22"
+    },
+    {
+      "school_id": "SCH41654598",
+      "school_category": 2,
+      "school_type": "Middle",
+      "district_type": "Middle",
+      "district_id": "D66291334",
+      "RCDTS_code": "920967135046716",
+      "grades_offered": "PK-12",
+      "parent_district": "D00664061",
+      "public_private_indicator": "Public",
+      "operational_status": "Open",
+      "senate_district_code": "37",
+      "house_district_code": "3"
+    },
+    {
+      "school_id": "SCH40068982",
+      "school_category": 4,
+      "school_type": "Elementary",
+      "district_type": "Elementary",
+      "district_id": "D90633301",
+      "RCDTS_code": "130853570083438",
+      "grades_offered": "PK-12",
+      "parent_district": "D75855906",
+      "public_private_indicator": "Private",
+      "operational_status": "Open",
+      "senate_district_code": "38",
+      "house_district_code": "62"
+    },
+    {
+      "school_id": "SCH65203366",
+      "school_category": 2,
+      "school_type": "Unit District",
+      "district_type": "High School",
+      "district_id": "D88065306",
+      "RCDTS_code": "420231903083954",
+      "grades_offered": "PK-12",
+      "parent_district": "D56552393",
+      "public_private_indicator": "Private",
+      "operational_status": "Open",
+      "senate_district_code": "25",
+      "house_district_code": "99"
+    }
+  ],
+  "Student Information System (SIS)": [
+    {
+      "student_id": "S9893402945",
+      "enrollment_id": "EN58596725",
+      "home_school_id": "SCH30566785",
+      "serving_school_id": "SCH30566785",
+      "enrollment_start_date": "2024-12-06",
+      "enrollment_end_date": "2023-02-04",
+      "exit_type_code": "11",
+      "grade_level": "12",
+      "PDA_percent_day_attendance": 7.33
+    },
+    {
+      "student_id": "S1929118390",
+      "enrollment_id": "EN28511292",
+      "home_school_id": "SCH34479434",
+      "serving_school_id": "SCH34479434",
+      "enrollment_start_date": "2022-11-12",
+      "enrollment_end_date": "2020-02-22",
+      "exit_type_code": "06",
+      "grade_level": "3",
+      "PDA_percent_day_attendance": 23.05
+    },
+    {
+      "student_id": "S4235281175",
+      "enrollment_id": "EN91342040",
+      "home_school_id": "SCH76802237",
+      "serving_school_id": "SCH76802237",
+      "enrollment_start_date": "2025-05-03",
+      "enrollment_end_date": "2021-02-23",
+      "exit_type_code": "17",
+      "grade_level": "10",
+      "PDA_percent_day_attendance": 87.36
+    },
+    {
+      "student_id": "S6161474269",
+      "enrollment_id": "EN29632281",
+      "home_school_id": "SCH75860080",
+      "serving_school_id": "SCH75860080",
+      "enrollment_start_date": "2020-03-22",
+      "enrollment_end_date": "2023-03-01",
+      "exit_type_code": "16",
+      "grade_level": "PK",
+      "PDA_percent_day_attendance": 19.34
+    },
+    {
+      "student_id": "S1348306198",
+      "enrollment_id": "EN31419661",
+      "home_school_id": "SCH67624494",
+      "serving_school_id": "SCH67624494",
+      "enrollment_start_date": "2025-07-15",
+      "enrollment_end_date": "2022-01-25",
+      "exit_type_code": "06",
+      "grade_level": "4",
+      "PDA_percent_day_attendance": 27.37
+    },
+    {
+      "student_id": "S0241788363",
+      "enrollment_id": "EN78051649",
+      "home_school_id": "SCH16681594",
+      "serving_school_id": "SCH16681594",
+      "enrollment_start_date": "2023-09-18",
+      "enrollment_end_date": "2023-05-15",
+      "exit_type_code": "19",
+      "grade_level": "K",
+      "PDA_percent_day_attendance": 83.8
+    },
+    {
+      "student_id": "S2562205433",
+      "enrollment_id": "EN47084819",
+      "home_school_id": "SCH31303992",
+      "serving_school_id": "SCH31303992",
+      "enrollment_start_date": "2020-12-29",
+      "enrollment_end_date": "2023-01-15",
+      "exit_type_code": "04",
+      "grade_level": "5",
+      "PDA_percent_day_attendance": 63.88
+    },
+    {
+      "student_id": "S1151666357",
+      "enrollment_id": "EN05824490",
+      "home_school_id": "SCH33579586",
+      "serving_school_id": "SCH33579586",
+      "enrollment_start_date": "2020-05-04",
+      "enrollment_end_date": "2023-01-13",
+      "exit_type_code": "06",
+      "grade_level": "11",
+      "PDA_percent_day_attendance": 27.33
+    },
+    {
+      "student_id": "S8961677661",
+      "enrollment_id": "EN03403922",
+      "home_school_id": "SCH03767449",
+      "serving_school_id": "SCH03767449",
+      "enrollment_start_date": "2024-07-30",
+      "enrollment_end_date": "2022-03-23",
+      "exit_type_code": "04",
+      "grade_level": "K",
+      "PDA_percent_day_attendance": 2.24
+    },
+    {
+      "student_id": "S3880581853",
+      "enrollment_id": "EN98177789",
+      "home_school_id": "SCH83459326",
+      "serving_school_id": "SCH83459326",
+      "enrollment_start_date": "2024-08-03",
+      "enrollment_end_date": "2025-05-20",
+      "exit_type_code": "08",
+      "grade_level": "PK",
+      "PDA_percent_day_attendance": 32.25
+    },
+    {
+      "student_id": "S6937919149",
+      "enrollment_id": "EN62430268",
+      "home_school_id": "SCH19638532",
+      "serving_school_id": "SCH19638532",
+      "enrollment_start_date": "2021-12-08",
+      "enrollment_end_date": "2023-08-11",
+      "exit_type_code": "09",
+      "grade_level": "7",
+      "PDA_percent_day_attendance": 6.12
+    },
+    {
+      "student_id": "S6603152781",
+      "enrollment_id": "EN81785702",
+      "home_school_id": "SCH37706143",
+      "serving_school_id": "SCH37706143",
+      "enrollment_start_date": "2024-04-27",
+      "enrollment_end_date": "2021-03-19",
+      "exit_type_code": "09",
+      "grade_level": "12",
+      "PDA_percent_day_attendance": 40.86
+    },
+    {
+      "student_id": "S7448117663",
+      "enrollment_id": "EN25104351",
+      "home_school_id": "SCH41654598",
+      "serving_school_id": "SCH41654598",
+      "enrollment_start_date": "2020-07-02",
+      "enrollment_end_date": "2020-10-01",
+      "exit_type_code": "05",
+      "grade_level": "2",
+      "PDA_percent_day_attendance": 6.42
+    },
+    {
+      "student_id": "S6999065960",
+      "enrollment_id": "EN78457040",
+      "home_school_id": "SCH40068982",
+      "serving_school_id": "SCH40068982",
+      "enrollment_start_date": "2021-11-30",
+      "enrollment_end_date": "2021-02-03",
+      "exit_type_code": "07",
+      "grade_level": "5",
+      "PDA_percent_day_attendance": 54.91
+    },
+    {
+      "student_id": "S8377331429",
+      "enrollment_id": "EN06448848",
+      "home_school_id": "SCH65203366",
+      "serving_school_id": "SCH65203366",
+      "enrollment_start_date": "2024-08-20",
+      "enrollment_end_date": "2023-02-08",
+      "exit_type_code": "15",
+      "grade_level": "1",
+      "PDA_percent_day_attendance": 30.85
+    }
+  ],
+  "RCDTS code": [
+    {
+      "region_code": "08",
+      "county_code": "067",
+      "district_code": "5016",
+      "type_code": "08",
+      "school_code": "2477"
+    },
+    {
+      "region_code": "61",
+      "county_code": "025",
+      "district_code": "7118",
+      "type_code": "08",
+      "school_code": "0678"
+    },
+    {
+      "region_code": "91",
+      "county_code": "089",
+      "district_code": "3423",
+      "type_code": "04",
+      "school_code": "9560"
+    },
+    {
+      "region_code": "36",
+      "county_code": "010",
+      "district_code": "9450",
+      "type_code": "04",
+      "school_code": "2653"
+    },
+    {
+      "region_code": "89",
+      "county_code": "078",
+      "district_code": "4515",
+      "type_code": "02",
+      "school_code": "5280"
+    },
+    {
+      "region_code": "08",
+      "county_code": "022",
+      "district_code": "2890",
+      "type_code": "04",
+      "school_code": "5617"
+    },
+    {
+      "region_code": "43",
+      "county_code": "002",
+      "district_code": "1268",
+      "type_code": "02",
+      "school_code": "6014"
+    },
+    {
+      "region_code": "92",
+      "county_code": "046",
+      "district_code": "7001",
+      "type_code": "02",
+      "school_code": "5950"
+    },
+    {
+      "region_code": "90",
+      "county_code": "009",
+      "district_code": "9351",
+      "type_code": "08",
+      "school_code": "5738"
+    },
+    {
+      "region_code": "84",
+      "county_code": "077",
+      "district_code": "5605",
+      "type_code": "02",
+      "school_code": "7552"
+    },
+    {
+      "region_code": "14",
+      "county_code": "099",
+      "district_code": "9074",
+      "type_code": "04",
+      "school_code": "2169"
+    },
+    {
+      "region_code": "94",
+      "county_code": "058",
+      "district_code": "6203",
+      "type_code": "04",
+      "school_code": "9143"
+    },
+    {
+      "region_code": "40",
+      "county_code": "094",
+      "district_code": "7961",
+      "type_code": "02",
+      "school_code": "6927"
+    },
+    {
+      "region_code": "41",
+      "county_code": "004",
+      "district_code": "7980",
+      "type_code": "04",
+      "school_code": "2426"
+    },
+    {
+      "region_code": "78",
+      "county_code": "038",
+      "district_code": "5148",
+      "type_code": "02",
+      "school_code": "1812"
+    }
+  ],
+  "SIS student demographics (race, gender)": [
+    {
+      "race_ethnicity": "Native Hawaiian or Other Pacific Islander",
+      "gender": "Female",
+      "birth_date": "2023-09-16"
+    },
+    {
+      "race_ethnicity": "Two or More Races",
+      "gender": "Non-Binary",
+      "birth_date": "2025-06-04"
+    },
+    {
+      "race_ethnicity": "White",
+      "gender": "Male",
+      "birth_date": "2020-05-03"
+    },
+    {
+      "race_ethnicity": "Hispanic or Latino",
+      "gender": "Non-Binary",
+      "birth_date": "2023-02-13"
+    },
+    {
+      "race_ethnicity": "Asian",
+      "gender": "Non-Binary",
+      "birth_date": "2022-08-08"
+    },
+    {
+      "race_ethnicity": "Asian",
+      "gender": "Male",
+      "birth_date": "2020-10-04"
+    },
+    {
+      "race_ethnicity": "American Indian or Alaska Native",
+      "gender": "Male",
+      "birth_date": "2023-01-18"
+    },
+    {
+      "race_ethnicity": "American Indian or Alaska Native",
+      "gender": "Male",
+      "birth_date": "2024-06-10"
+    },
+    {
+      "race_ethnicity": "Two or More Races",
+      "gender": "Female",
+      "birth_date": "2024-03-14"
+    },
+    {
+      "race_ethnicity": "Asian",
+      "gender": "Male",
+      "birth_date": "2024-01-18"
+    },
+    {
+      "race_ethnicity": "Asian",
+      "gender": "Non-Binary",
+      "birth_date": "2021-05-21"
+    },
+    {
+      "race_ethnicity": "Two or More Races",
+      "gender": "Non-Binary",
+      "birth_date": "2024-10-08"
+    },
+    {
+      "race_ethnicity": "Hispanic or Latino",
+      "gender": "Female",
+      "birth_date": "2023-10-02"
+    },
+    {
+      "race_ethnicity": "White",
+      "gender": "Non-Binary",
+      "birth_date": "2021-12-31"
+    },
+    {
+      "race_ethnicity": "Asian",
+      "gender": "Male",
+      "birth_date": "2022-02-17"
+    }
+  ],
+  "Assessment Correction File": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "assessment_type": "ISA",
+      "grade_at_testing": "PK",
+      "race": "White",
+      "gender": "Female",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "N"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "assessment_type": "IAR",
+      "grade_at_testing": "K",
+      "race": "Black or African American",
+      "gender": "Non-Binary",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "assessment_type": "IAR",
+      "grade_at_testing": "K",
+      "race": "American Indian or Alaska Native",
+      "gender": "Male",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "assessment_type": "SAT",
+      "grade_at_testing": "8",
+      "race": "Native Hawaiian or Other Pacific Islander",
+      "gender": "Male",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "assessment_type": "IAR",
+      "grade_at_testing": "9",
+      "race": "American Indian or Alaska Native",
+      "gender": "Non-Binary",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "N"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "assessment_type": "IAR",
+      "grade_at_testing": "10",
+      "race": "Native Hawaiian or Other Pacific Islander",
+      "gender": "Female",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "assessment_type": "ISA",
+      "grade_at_testing": "1",
+      "race": "American Indian or Alaska Native",
+      "gender": "Male",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "N"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "assessment_type": "ISA",
+      "grade_at_testing": "7",
+      "race": "White",
+      "gender": "Female",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "assessment_type": "SAT",
+      "grade_at_testing": "3",
+      "race": "American Indian or Alaska Native",
+      "gender": "Male",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "assessment_type": "IAR",
+      "grade_at_testing": "11",
+      "race": "Black or African American",
+      "gender": "Female",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "assessment_type": "SAT",
+      "grade_at_testing": "9",
+      "race": "Native Hawaiian or Other Pacific Islander",
+      "gender": "Non-Binary",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "assessment_type": "SAT",
+      "grade_at_testing": "10",
+      "race": "Asian",
+      "gender": "Female",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "Y",
+      "alternate_assessment_indicator": "N"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "assessment_type": "DLM-AA",
+      "grade_at_testing": "PK",
+      "race": "Two or More Races",
+      "gender": "Female",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "N",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "assessment_type": "DLM-AA",
+      "grade_at_testing": "5",
+      "race": "Two or More Races",
+      "gender": "Male",
+      "first_year_in_US_indicator": "N",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "assessment_type": "DLM-AA",
+      "grade_at_testing": "4",
+      "race": "American Indian or Alaska Native",
+      "gender": "Male",
+      "first_year_in_US_indicator": "Y",
+      "EL_indicator": "Y",
+      "IDEA_services_indicator": "N",
+      "alternate_assessment_indicator": "Y"
+    }
+  ],
+  "Fall Enrollment Snapshot": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "school_id": "SCH99273051",
+      "district_id": "D76270073",
+      "grade_level": "2",
+      "enrollment_date": "2022-08-14",
+      "PDA": 85.0,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2022-09-18"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "school_id": "SCH41988050",
+      "district_id": "D42918568",
+      "grade_level": "6",
+      "enrollment_date": "2023-03-27",
+      "PDA": 53.6,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2024-01-06"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "school_id": "SCH84332257",
+      "district_id": "D57440755",
+      "grade_level": "8",
+      "enrollment_date": "2022-09-26",
+      "PDA": 67.9,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2022-06-10"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "school_id": "SCH07038375",
+      "district_id": "D56855931",
+      "grade_level": "3",
+      "enrollment_date": "2023-06-22",
+      "PDA": 87.8,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2020-01-15"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "school_id": "SCH46123856",
+      "district_id": "D92845968",
+      "grade_level": "11",
+      "enrollment_date": "2024-10-19",
+      "PDA": 63.0,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2020-03-09"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "school_id": "SCH43385309",
+      "district_id": "D44978486",
+      "grade_level": "5",
+      "enrollment_date": "2023-12-25",
+      "PDA": 56.2,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2023-11-12"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "school_id": "SCH70451759",
+      "district_id": "D49393913",
+      "grade_level": "4",
+      "enrollment_date": "2022-11-27",
+      "PDA": 90.3,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2025-04-26"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "school_id": "SCH18634223",
+      "district_id": "D21344081",
+      "grade_level": "11",
+      "enrollment_date": "2024-08-03",
+      "PDA": 64.2,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2021-03-03"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "school_id": "SCH24117747",
+      "district_id": "D95834270",
+      "grade_level": "12",
+      "enrollment_date": "2024-11-23",
+      "PDA": 55.1,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2022-07-24"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "school_id": "SCH27529867",
+      "district_id": "D12721647",
+      "grade_level": "PK",
+      "enrollment_date": "2023-09-06",
+      "PDA": 75.3,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2025-09-24"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "school_id": "SCH22103603",
+      "district_id": "D63183488",
+      "grade_level": "8",
+      "enrollment_date": "2022-04-30",
+      "PDA": 80.8,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2021-07-31"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "school_id": "SCH38180255",
+      "district_id": "D30342125",
+      "grade_level": "K",
+      "enrollment_date": "2020-05-01",
+      "PDA": 93.3,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2023-01-27"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "school_id": "SCH24903326",
+      "district_id": "D44830223",
+      "grade_level": "9",
+      "enrollment_date": "2024-03-27",
+      "PDA": 51.3,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2021-01-13"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "school_id": "SCH09569535",
+      "district_id": "D58673759",
+      "grade_level": "5",
+      "enrollment_date": "2024-06-13",
+      "PDA": 59.5,
+      "FEEnrollment_flag": "N",
+      "snapshot_date": "2022-06-21"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "school_id": "SCH80102461",
+      "district_id": "D63702849",
+      "grade_level": "8",
+      "enrollment_date": "2022-02-03",
+      "PDA": 62.8,
+      "FEEnrollment_flag": "Y",
+      "snapshot_date": "2024-03-11"
+    }
+  ],
+  "SIS IDEA Services (IEP), 504 Plan records": [
+    {
+      "student_id": "S1720925043",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "N",
+      "fund_code": "C",
+      "IDEA_services_start_date": "2023-01-19",
+      "IDEA_services_end_date": "2024-04-09"
+    },
+    {
+      "student_id": "S6954999034",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "N",
+      "fund_code": "N",
+      "IDEA_services_start_date": "2020-10-13",
+      "IDEA_services_end_date": "2020-09-01"
+    },
+    {
+      "student_id": "S6287257217",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "Y",
+      "fund_code": "U",
+      "IDEA_services_start_date": "2023-11-29",
+      "IDEA_services_end_date": "2023-10-14"
+    },
+    {
+      "student_id": "S0655156791",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "Y",
+      "fund_code": "P",
+      "IDEA_services_start_date": "2024-06-26",
+      "IDEA_services_end_date": "2021-10-29"
+    },
+    {
+      "student_id": "S8833901109",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "N",
+      "fund_code": "C",
+      "IDEA_services_start_date": "2025-05-23",
+      "IDEA_services_end_date": "2021-04-26"
+    },
+    {
+      "student_id": "S7282752024",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "Y",
+      "fund_code": "P",
+      "IDEA_services_start_date": "2025-11-02",
+      "IDEA_services_end_date": "2023-08-05"
+    },
+    {
+      "student_id": "S0747015398",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "Y",
+      "fund_code": "C",
+      "IDEA_services_start_date": "2024-02-05",
+      "IDEA_services_end_date": "2024-09-02"
+    },
+    {
+      "student_id": "S3811654766",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "Y",
+      "fund_code": "B",
+      "IDEA_services_start_date": "2023-03-19",
+      "IDEA_services_end_date": "2023-10-10"
+    },
+    {
+      "student_id": "S9920916304",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "N",
+      "fund_code": "L",
+      "IDEA_services_start_date": "2022-05-04",
+      "IDEA_services_end_date": "2025-08-24"
+    },
+    {
+      "student_id": "S3341137107",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "Y",
+      "fund_code": "C",
+      "IDEA_services_start_date": "2022-02-05",
+      "IDEA_services_end_date": "2022-06-06"
+    },
+    {
+      "student_id": "S9476363160",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "N",
+      "fund_code": "N",
+      "IDEA_services_start_date": "2023-04-13",
+      "IDEA_services_end_date": "2021-08-16"
+    },
+    {
+      "student_id": "S2696517916",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "N",
+      "fund_code": "L",
+      "IDEA_services_start_date": "2020-02-05",
+      "IDEA_services_end_date": "2023-06-14"
+    },
+    {
+      "student_id": "S0422623162",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "Y",
+      "fund_code": "U",
+      "IDEA_services_start_date": "2020-12-06",
+      "IDEA_services_end_date": "2021-01-30"
+    },
+    {
+      "student_id": "S3515038619",
+      "IEP_indicator": "Y",
+      "504_plan_indicator": "N",
+      "fund_code": "N",
+      "IDEA_services_start_date": "2023-09-06",
+      "IDEA_services_end_date": "2024-10-05"
+    },
+    {
+      "student_id": "S0138284973",
+      "IEP_indicator": "N",
+      "504_plan_indicator": "Y",
+      "fund_code": "P",
+      "IDEA_services_start_date": "2023-03-10",
+      "IDEA_services_end_date": "2021-04-15"
+    }
+  ],
+  "SIS EL status table": [
+    {
+      "student_id": "S1720925043",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 2",
+      "first_EL_date": "2021-08-18",
+      "EL_exit_date": "2022-06-10",
+      "ACCESS_composite_score": 4.5
+    },
+    {
+      "student_id": "S6954999034",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Complete",
+      "first_EL_date": "2021-08-25",
+      "EL_exit_date": "2022-01-16",
+      "ACCESS_composite_score": 1.8
+    },
+    {
+      "student_id": "S6287257217",
+      "EL_status": "Current EL",
+      "EL_transition_status": "N/A",
+      "first_EL_date": "2021-12-01",
+      "EL_exit_date": "2025-07-13",
+      "ACCESS_composite_score": 4.3
+    },
+    {
+      "student_id": "S0655156791",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 1",
+      "first_EL_date": "2025-03-21",
+      "EL_exit_date": "2025-03-24",
+      "ACCESS_composite_score": 4.4
+    },
+    {
+      "student_id": "S8833901109",
+      "EL_status": "Never EL",
+      "EL_transition_status": "N/A",
+      "first_EL_date": "2021-05-13",
+      "EL_exit_date": "2020-11-11",
+      "ACCESS_composite_score": 4.0
+    },
+    {
+      "student_id": "S7282752024",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 2",
+      "first_EL_date": "2022-07-25",
+      "EL_exit_date": "2025-05-01",
+      "ACCESS_composite_score": 5.5
+    },
+    {
+      "student_id": "S0747015398",
+      "EL_status": "Transition Incomplete",
+      "EL_transition_status": "Transition Year 1",
+      "first_EL_date": "2025-11-22",
+      "EL_exit_date": "2022-08-12",
+      "ACCESS_composite_score": 5.9
+    },
+    {
+      "student_id": "S3811654766",
+      "EL_status": "Transition Incomplete",
+      "EL_transition_status": "Transition Complete",
+      "first_EL_date": "2021-12-07",
+      "EL_exit_date": "2025-12-09",
+      "ACCESS_composite_score": 5.1
+    },
+    {
+      "student_id": "S9920916304",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 2",
+      "first_EL_date": "2023-03-26",
+      "EL_exit_date": "2023-08-26",
+      "ACCESS_composite_score": 4.7
+    },
+    {
+      "student_id": "S3341137107",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 1",
+      "first_EL_date": "2023-01-26",
+      "EL_exit_date": "2023-09-05",
+      "ACCESS_composite_score": 1.2
+    },
+    {
+      "student_id": "S9476363160",
+      "EL_status": "Former EL",
+      "EL_transition_status": "Transition Complete",
+      "first_EL_date": "2024-02-08",
+      "EL_exit_date": "2020-10-21",
+      "ACCESS_composite_score": 2.9
+    },
+    {
+      "student_id": "S2696517916",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 2",
+      "first_EL_date": "2022-05-24",
+      "EL_exit_date": "2021-03-27",
+      "ACCESS_composite_score": 5.9
+    },
+    {
+      "student_id": "S0422623162",
+      "EL_status": "Current EL",
+      "EL_transition_status": "Transition Year 1",
+      "first_EL_date": "2025-04-10",
+      "EL_exit_date": "2021-12-16",
+      "ACCESS_composite_score": 3.8
+    },
+    {
+      "student_id": "S3515038619",
+      "EL_status": "Never EL",
+      "EL_transition_status": "Transition Year 1",
+      "first_EL_date": "2021-01-01",
+      "EL_exit_date": "2025-10-26",
+      "ACCESS_composite_score": 1.4
+    },
+    {
+      "student_id": "S0138284973",
+      "EL_status": "Former EL",
+      "EL_transition_status": "Transition Complete",
+      "first_EL_date": "2021-12-25",
+      "EL_exit_date": "2021-06-06",
+      "ACCESS_composite_score": 4.3
+    }
+  ],
+  "SIS Homeless table": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "homeless_indicator": "N",
+      "school_year": "2024-25"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "homeless_indicator": "N",
+      "school_year": "2021-22"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "homeless_indicator": "N",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "homeless_indicator": "N",
+      "school_year": "2022-23"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "homeless_indicator": "Y",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "homeless_indicator": "N",
+      "school_year": "2024-25"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "homeless_indicator": "Y",
+      "school_year": "2020-21"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "homeless_indicator": "Y",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "homeless_indicator": "N",
+      "school_year": "2021-22"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "homeless_indicator": "N",
+      "school_year": "2024-25"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "homeless_indicator": "N",
+      "school_year": "2024-25"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "homeless_indicator": "Y",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "homeless_indicator": "Y",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "homeless_indicator": "Y",
+      "school_year": "2023-24"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "homeless_indicator": "N",
+      "school_year": "2023-24"
+    }
+  ],
+  "DCFS file (Youth in Care)": [
+    {
+      "student_id": "S1720925043",
+      "youth_in_care_indicator": "N"
+    },
+    {
+      "student_id": "S6954999034",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S6287257217",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S0655156791",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S8833901109",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S7282752024",
+      "youth_in_care_indicator": "N"
+    },
+    {
+      "student_id": "S0747015398",
+      "youth_in_care_indicator": "N"
+    },
+    {
+      "student_id": "S3811654766",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S9920916304",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S3341137107",
+      "youth_in_care_indicator": "N"
+    },
+    {
+      "student_id": "S9476363160",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S2696517916",
+      "youth_in_care_indicator": "N"
+    },
+    {
+      "student_id": "S0422623162",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S3515038619",
+      "youth_in_care_indicator": "Y"
+    },
+    {
+      "student_id": "S0138284973",
+      "youth_in_care_indicator": "N"
+    }
+  ],
+  "SIS FRL indicator (Low Income)": [
+    {
+      "student_id": "S1720925043",
+      "FRL_status": "Free",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S6954999034",
+      "FRL_status": "Not Eligible",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S6287257217",
+      "FRL_status": "Not Eligible",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S0655156791",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S8833901109",
+      "FRL_status": "Not Eligible",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S7282752024",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S0747015398",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S3811654766",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S9920916304",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S3341137107",
+      "FRL_status": "Free",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S9476363160",
+      "FRL_status": "Reduced",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S2696517916",
+      "FRL_status": "Not Eligible",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S0422623162",
+      "FRL_status": "Free",
+      "low_income_indicator": "N"
+    },
+    {
+      "student_id": "S3515038619",
+      "FRL_status": "Free",
+      "low_income_indicator": "Y"
+    },
+    {
+      "student_id": "S0138284973",
+      "FRL_status": "Not Eligible",
+      "low_income_indicator": "Y"
+    }
+  ],
+  "SIS Migrant, Military, Private School flags": [
+    {
+      "student_id": "S1720925043",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S6954999034",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S6287257217",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "N"
+    },
+    {
+      "student_id": "S0655156791",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S8833901109",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S7282752024",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "N",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S0747015398",
+      "migrant_indicator": "N",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S3811654766",
+      "migrant_indicator": "N",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S9920916304",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S3341137107",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "N",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S9476363160",
+      "migrant_indicator": "N",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S2696517916",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S0422623162",
+      "migrant_indicator": "Y",
+      "military_connected_indicator": "N",
+      "private_school_indicator": "Y"
+    },
+    {
+      "student_id": "S3515038619",
+      "migrant_indicator": "N",
+      "military_connected_indicator": "N",
+      "private_school_indicator": "N"
+    },
+    {
+      "student_id": "S0138284973",
+      "migrant_indicator": "N",
+      "military_connected_indicator": "Y",
+      "private_school_indicator": "Y"
+    }
+  ],
+  "I-STAR Child Count": [
+    {
+      "student_id": "S1720925043",
+      "district_id": "D76270073",
+      "school_id": "SCH99273051",
+      "child_count_date": "2020-02-16",
+      "education_environment_code": "D",
+      "fund_code": "L",
+      "race_ethnicity": "Two or More Races",
+      "disability_category": "ED",
+      "age": 15
+    },
+    {
+      "student_id": "S6954999034",
+      "district_id": "D42918568",
+      "school_id": "SCH41988050",
+      "child_count_date": "2020-12-09",
+      "education_environment_code": "C",
+      "fund_code": "L",
+      "race_ethnicity": "Black or African American",
+      "disability_category": "SLI",
+      "age": 13
+    },
+    {
+      "student_id": "S6287257217",
+      "district_id": "D57440755",
+      "school_id": "SCH84332257",
+      "child_count_date": "2023-05-31",
+      "education_environment_code": "C",
+      "fund_code": "N",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "disability_category": "ID",
+      "age": 9
+    },
+    {
+      "student_id": "S0655156791",
+      "district_id": "D56855931",
+      "school_id": "SCH07038375",
+      "child_count_date": "2020-12-31",
+      "education_environment_code": "C",
+      "fund_code": "N",
+      "race_ethnicity": "Native Hawaiian or Other Pacific Islander",
+      "disability_category": "SLD",
+      "age": 15
+    },
+    {
+      "student_id": "S8833901109",
+      "district_id": "D92845968",
+      "school_id": "SCH46123856",
+      "child_count_date": "2020-03-14",
+      "education_environment_code": "B",
+      "fund_code": "A",
+      "race_ethnicity": "Two or More Races",
+      "disability_category": "SLD",
+      "age": 11
+    },
+    {
+      "student_id": "S7282752024",
+      "district_id": "D44978486",
+      "school_id": "SCH43385309",
+      "child_count_date": "2024-07-28",
+      "education_environment_code": "E",
+      "fund_code": "A",
+      "race_ethnicity": "Asian",
+      "disability_category": "ID",
+      "age": 3
+    },
+    {
+      "student_id": "S0747015398",
+      "district_id": "D49393913",
+      "school_id": "SCH70451759",
+      "child_count_date": "2024-04-15",
+      "education_environment_code": "E",
+      "fund_code": "C",
+      "race_ethnicity": "Black or African American",
+      "disability_category": "OHI",
+      "age": 6
+    },
+    {
+      "student_id": "S3811654766",
+      "district_id": "D21344081",
+      "school_id": "SCH18634223",
+      "child_count_date": "2025-09-03",
+      "education_environment_code": "C",
+      "fund_code": "N",
+      "race_ethnicity": "Black or African American",
+      "disability_category": "SLD",
+      "age": 12
+    },
+    {
+      "student_id": "S9920916304",
+      "district_id": "D95834270",
+      "school_id": "SCH24117747",
+      "child_count_date": "2020-04-26",
+      "education_environment_code": "B",
+      "fund_code": "A",
+      "race_ethnicity": "Black or African American",
+      "disability_category": "ID",
+      "age": 9
+    },
+    {
+      "student_id": "S3341137107",
+      "district_id": "D12721647",
+      "school_id": "SCH27529867",
+      "child_count_date": "2021-12-19",
+      "education_environment_code": "E",
+      "fund_code": "L",
+      "race_ethnicity": "Native Hawaiian or Other Pacific Islander",
+      "disability_category": "ED",
+      "age": 14
+    },
+    {
+      "student_id": "S9476363160",
+      "district_id": "D63183488",
+      "school_id": "SCH22103603",
+      "child_count_date": "2023-08-17",
+      "education_environment_code": "D",
+      "fund_code": "A",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "disability_category": "ID",
+      "age": 12
+    },
+    {
+      "student_id": "S2696517916",
+      "district_id": "D30342125",
+      "school_id": "SCH38180255",
+      "child_count_date": "2025-06-12",
+      "education_environment_code": "A",
+      "fund_code": "U",
+      "race_ethnicity": "Two or More Races",
+      "disability_category": "AUT",
+      "age": 20
+    },
+    {
+      "student_id": "S0422623162",
+      "district_id": "D44830223",
+      "school_id": "SCH24903326",
+      "child_count_date": "2020-09-12",
+      "education_environment_code": "E",
+      "fund_code": "A",
+      "race_ethnicity": "Native Hawaiian or Other Pacific Islander",
+      "disability_category": "ID",
+      "age": 10
+    },
+    {
+      "student_id": "S3515038619",
+      "district_id": "D58673759",
+      "school_id": "SCH09569535",
+      "child_count_date": "2021-12-01",
+      "education_environment_code": "C",
+      "fund_code": "L",
+      "race_ethnicity": "Two or More Races",
+      "disability_category": "OHI",
+      "age": 9
+    },
+    {
+      "student_id": "S0138284973",
+      "district_id": "D63702849",
+      "school_id": "SCH80102461",
+      "child_count_date": "2022-11-29",
+      "education_environment_code": "A",
+      "fund_code": "N",
+      "race_ethnicity": "Two or More Races",
+      "disability_category": "SLD",
+      "age": 15
+    }
+  ],
+  "SIS Assessment Score records (IAR)": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "score_id": "SC29197588",
+      "scale_score": 687,
+      "performance_level": 3,
+      "grade_at_testing": "1",
+      "subject": "ELA",
+      "RNVTA_code": "23",
+      "suppression_code": "",
+      "test_date": "2024-07-06"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "score_id": "SC93528616",
+      "scale_score": 596,
+      "performance_level": 2,
+      "grade_at_testing": "5",
+      "subject": "Social Studies",
+      "RNVTA_code": "14",
+      "suppression_code": "02",
+      "test_date": "2020-06-13"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "score_id": "SC15309406",
+      "scale_score": 369,
+      "performance_level": 5,
+      "grade_at_testing": "4",
+      "subject": "ELA",
+      "RNVTA_code": "25",
+      "suppression_code": "02",
+      "test_date": "2021-01-04"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "score_id": "SC99630304",
+      "scale_score": 393,
+      "performance_level": 5,
+      "grade_at_testing": "5",
+      "subject": "Social Studies",
+      "RNVTA_code": "11",
+      "suppression_code": "03",
+      "test_date": "2024-04-15"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "score_id": "SC06730288",
+      "scale_score": 736,
+      "performance_level": 5,
+      "grade_at_testing": "8",
+      "subject": "Math",
+      "RNVTA_code": "17",
+      "suppression_code": "01",
+      "test_date": "2025-06-25"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "score_id": "SC48446177",
+      "scale_score": 717,
+      "performance_level": 4,
+      "grade_at_testing": "4",
+      "subject": "ELA",
+      "RNVTA_code": "21",
+      "suppression_code": "03",
+      "test_date": "2022-12-07"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "score_id": "SC24209468",
+      "scale_score": 233,
+      "performance_level": 1,
+      "grade_at_testing": "12",
+      "subject": "Social Studies",
+      "RNVTA_code": "13",
+      "suppression_code": "",
+      "test_date": "2022-03-06"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "score_id": "SC01692297",
+      "scale_score": 217,
+      "performance_level": 3,
+      "grade_at_testing": "2",
+      "subject": "Science",
+      "RNVTA_code": "05",
+      "suppression_code": "02",
+      "test_date": "2022-05-05"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "score_id": "SC49140180",
+      "scale_score": 149,
+      "performance_level": 5,
+      "grade_at_testing": "10",
+      "subject": "ELA",
+      "RNVTA_code": "15",
+      "suppression_code": "02",
+      "test_date": "2025-05-16"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "score_id": "SC94375597",
+      "scale_score": 524,
+      "performance_level": 2,
+      "grade_at_testing": "7",
+      "subject": "ELA",
+      "RNVTA_code": "22",
+      "suppression_code": "03",
+      "test_date": "2025-04-04"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "score_id": "SC46654034",
+      "scale_score": 509,
+      "performance_level": 2,
+      "grade_at_testing": "10",
+      "subject": "ELA",
+      "RNVTA_code": "12",
+      "suppression_code": "",
+      "test_date": "2021-07-12"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "score_id": "SC65384585",
+      "scale_score": 682,
+      "performance_level": 4,
+      "grade_at_testing": "7",
+      "subject": "Math",
+      "RNVTA_code": "02",
+      "suppression_code": "03",
+      "test_date": "2023-05-08"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "score_id": "SC88118294",
+      "scale_score": 688,
+      "performance_level": 4,
+      "grade_at_testing": "3",
+      "subject": "ELA",
+      "RNVTA_code": "03",
+      "suppression_code": "01",
+      "test_date": "2022-03-23"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "score_id": "SC33602241",
+      "scale_score": 117,
+      "performance_level": 5,
+      "grade_at_testing": "3",
+      "subject": "Social Studies",
+      "RNVTA_code": "01",
+      "suppression_code": "",
+      "test_date": "2020-05-21"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "score_id": "SC11750526",
+      "scale_score": 855,
+      "performance_level": 2,
+      "grade_at_testing": "12",
+      "subject": "Math",
+      "RNVTA_code": "07",
+      "suppression_code": "03",
+      "test_date": "2025-12-05"
+    }
+  ],
+  "SIS Assessment Score records (SAT)": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "score_id": "SC01012042",
+      "scale_score_ELA": 249,
+      "scale_score_Math": 428,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 4,
+      "grade_at_testing": "10",
+      "RNVTA_code": "02",
+      "suppression_code": "02",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "N",
+      "test_date": "2022-10-11"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "score_id": "SC64951988",
+      "scale_score_ELA": 785,
+      "scale_score_Math": 232,
+      "performance_level_ELA": 1,
+      "performance_level_Math": 2,
+      "grade_at_testing": "9",
+      "RNVTA_code": "16",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2022-08-01"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "score_id": "SC18748549",
+      "scale_score_ELA": 450,
+      "scale_score_Math": 235,
+      "performance_level_ELA": 4,
+      "performance_level_Math": 3,
+      "grade_at_testing": "5",
+      "RNVTA_code": "15",
+      "suppression_code": "01",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2022-09-10"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "score_id": "SC41251480",
+      "scale_score_ELA": 215,
+      "scale_score_Math": 675,
+      "performance_level_ELA": 1,
+      "performance_level_Math": 1,
+      "grade_at_testing": "4",
+      "RNVTA_code": "21",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "N",
+      "test_date": "2020-05-05"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "score_id": "SC50242833",
+      "scale_score_ELA": 615,
+      "scale_score_Math": 350,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 3,
+      "grade_at_testing": "8",
+      "RNVTA_code": "15",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "Y",
+      "Math_participation_indicator": "N",
+      "test_date": "2024-08-13"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "score_id": "SC16181921",
+      "scale_score_ELA": 402,
+      "scale_score_Math": 385,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 4,
+      "grade_at_testing": "3",
+      "RNVTA_code": "10",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2022-03-21"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "score_id": "SC42852370",
+      "scale_score_ELA": 660,
+      "scale_score_Math": 371,
+      "performance_level_ELA": 3,
+      "performance_level_Math": 4,
+      "grade_at_testing": "PK",
+      "RNVTA_code": "19",
+      "suppression_code": "03",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "Y",
+      "Math_participation_indicator": "Y",
+      "test_date": "2024-05-23"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "score_id": "SC53660158",
+      "scale_score_ELA": 407,
+      "scale_score_Math": 717,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 3,
+      "grade_at_testing": "6",
+      "RNVTA_code": "08",
+      "suppression_code": "03",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "Y",
+      "Math_participation_indicator": "Y",
+      "test_date": "2024-03-09"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "score_id": "SC55315921",
+      "scale_score_ELA": 463,
+      "scale_score_Math": 406,
+      "performance_level_ELA": 1,
+      "performance_level_Math": 1,
+      "grade_at_testing": "5",
+      "RNVTA_code": "17",
+      "suppression_code": "02",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2025-10-28"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "score_id": "SC25268555",
+      "scale_score_ELA": 605,
+      "scale_score_Math": 361,
+      "performance_level_ELA": 4,
+      "performance_level_Math": 4,
+      "grade_at_testing": "1",
+      "RNVTA_code": "23",
+      "suppression_code": "03",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2020-07-11"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "score_id": "SC60887631",
+      "scale_score_ELA": 554,
+      "scale_score_Math": 527,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 2,
+      "grade_at_testing": "7",
+      "RNVTA_code": "15",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "Y",
+      "Math_participation_indicator": "Y",
+      "test_date": "2021-11-18"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "score_id": "SC54868757",
+      "scale_score_ELA": 753,
+      "scale_score_Math": 791,
+      "performance_level_ELA": 4,
+      "performance_level_Math": 2,
+      "grade_at_testing": "6",
+      "RNVTA_code": "14",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "Y",
+      "test_date": "2020-03-31"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "score_id": "SC13549860",
+      "scale_score_ELA": 409,
+      "scale_score_Math": 249,
+      "performance_level_ELA": 4,
+      "performance_level_Math": 3,
+      "grade_at_testing": "3",
+      "RNVTA_code": "12",
+      "suppression_code": "01",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "N",
+      "test_date": "2024-08-08"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "score_id": "SC43489862",
+      "scale_score_ELA": 216,
+      "scale_score_Math": 681,
+      "performance_level_ELA": 4,
+      "performance_level_Math": 1,
+      "grade_at_testing": "6",
+      "RNVTA_code": "06",
+      "suppression_code": "01",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "N",
+      "Math_participation_indicator": "N",
+      "test_date": "2020-01-28"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "score_id": "SC67205051",
+      "scale_score_ELA": 409,
+      "scale_score_Math": 229,
+      "performance_level_ELA": 2,
+      "performance_level_Math": 3,
+      "grade_at_testing": "11",
+      "RNVTA_code": "23",
+      "suppression_code": "",
+      "AccessTestCode": "10",
+      "ELA_participation_indicator": "Y",
+      "Math_participation_indicator": "Y",
+      "test_date": "2021-05-23"
+    }
+  ],
+  "SIS Assessment Score records (ISA)": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "score_id": "SC10544722",
+      "scale_score": 612,
+      "performance_level": 3,
+      "grade_at_testing": "12",
+      "subject": "Social Studies",
+      "RNVTA_code": "24",
+      "suppression_code": "",
+      "test_date": "2020-10-31"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "score_id": "SC06536432",
+      "scale_score": 572,
+      "performance_level": 2,
+      "grade_at_testing": "4",
+      "subject": "Social Studies",
+      "RNVTA_code": "02",
+      "suppression_code": "",
+      "test_date": "2022-07-20"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "score_id": "SC81189325",
+      "scale_score": 821,
+      "performance_level": 5,
+      "grade_at_testing": "4",
+      "subject": "ELA",
+      "RNVTA_code": "14",
+      "suppression_code": "03",
+      "test_date": "2021-04-06"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "score_id": "SC18887285",
+      "scale_score": 882,
+      "performance_level": 5,
+      "grade_at_testing": "7",
+      "subject": "Science",
+      "RNVTA_code": "19",
+      "suppression_code": "03",
+      "test_date": "2021-05-04"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "score_id": "SC14323727",
+      "scale_score": 793,
+      "performance_level": 2,
+      "grade_at_testing": "PK",
+      "subject": "Math",
+      "RNVTA_code": "21",
+      "suppression_code": "",
+      "test_date": "2023-01-20"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "score_id": "SC97442090",
+      "scale_score": 646,
+      "performance_level": 5,
+      "grade_at_testing": "K",
+      "subject": "Social Studies",
+      "RNVTA_code": "12",
+      "suppression_code": "03",
+      "test_date": "2020-08-15"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "score_id": "SC99866546",
+      "scale_score": 240,
+      "performance_level": 4,
+      "grade_at_testing": "6",
+      "subject": "Social Studies",
+      "RNVTA_code": "22",
+      "suppression_code": "02",
+      "test_date": "2022-10-01"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "score_id": "SC06499222",
+      "scale_score": 709,
+      "performance_level": 2,
+      "grade_at_testing": "4",
+      "subject": "Social Studies",
+      "RNVTA_code": "20",
+      "suppression_code": "03",
+      "test_date": "2023-12-13"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "score_id": "SC14585816",
+      "scale_score": 196,
+      "performance_level": 5,
+      "grade_at_testing": "1",
+      "subject": "Social Studies",
+      "RNVTA_code": "09",
+      "suppression_code": "01",
+      "test_date": "2024-03-15"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "score_id": "SC85497397",
+      "scale_score": 682,
+      "performance_level": 2,
+      "grade_at_testing": "6",
+      "subject": "ELA",
+      "RNVTA_code": "03",
+      "suppression_code": "02",
+      "test_date": "2022-09-30"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "score_id": "SC67274003",
+      "scale_score": 244,
+      "performance_level": 2,
+      "grade_at_testing": "11",
+      "subject": "Science",
+      "RNVTA_code": "22",
+      "suppression_code": "01",
+      "test_date": "2022-02-19"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "score_id": "SC64638711",
+      "scale_score": 756,
+      "performance_level": 5,
+      "grade_at_testing": "1",
+      "subject": "ELA",
+      "RNVTA_code": "12",
+      "suppression_code": "01",
+      "test_date": "2023-06-08"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "score_id": "SC06491658",
+      "scale_score": 640,
+      "performance_level": 1,
+      "grade_at_testing": "3",
+      "subject": "Math",
+      "RNVTA_code": "02",
+      "suppression_code": "",
+      "test_date": "2023-11-28"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "score_id": "SC70572112",
+      "scale_score": 740,
+      "performance_level": 4,
+      "grade_at_testing": "1",
+      "subject": "ELA",
+      "RNVTA_code": "14",
+      "suppression_code": "03",
+      "test_date": "2022-10-11"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "score_id": "SC19853308",
+      "scale_score": 122,
+      "performance_level": 3,
+      "grade_at_testing": "9",
+      "subject": "ELA",
+      "RNVTA_code": "11",
+      "suppression_code": "02",
+      "test_date": "2021-01-16"
+    }
+  ],
+  "SIS Assessment Score records (DLM-AA)": [
+    {
+      "student_id": "S1720925043",
+      "enrollment_id": "EN21857919",
+      "score_id": "SC69024970",
+      "performance_level": 3,
+      "grade_at_testing": "7",
+      "subject": "ELA",
+      "RNVTA_code": "04",
+      "suppression_code": "01",
+      "test_date": "2025-07-16"
+    },
+    {
+      "student_id": "S6954999034",
+      "enrollment_id": "EN38087080",
+      "score_id": "SC40715120",
+      "performance_level": 2,
+      "grade_at_testing": "PK",
+      "subject": "Math",
+      "RNVTA_code": "03",
+      "suppression_code": "03",
+      "test_date": "2024-07-09"
+    },
+    {
+      "student_id": "S6287257217",
+      "enrollment_id": "EN07691079",
+      "score_id": "SC60202453",
+      "performance_level": 1,
+      "grade_at_testing": "6",
+      "subject": "Science",
+      "RNVTA_code": "25",
+      "suppression_code": "03",
+      "test_date": "2022-08-31"
+    },
+    {
+      "student_id": "S0655156791",
+      "enrollment_id": "EN03127076",
+      "score_id": "SC18154294",
+      "performance_level": 3,
+      "grade_at_testing": "12",
+      "subject": "ELA",
+      "RNVTA_code": "12",
+      "suppression_code": "03",
+      "test_date": "2025-03-17"
+    },
+    {
+      "student_id": "S8833901109",
+      "enrollment_id": "EN53515253",
+      "score_id": "SC29024732",
+      "performance_level": 5,
+      "grade_at_testing": "8",
+      "subject": "Science",
+      "RNVTA_code": "17",
+      "suppression_code": "",
+      "test_date": "2022-08-18"
+    },
+    {
+      "student_id": "S7282752024",
+      "enrollment_id": "EN55349645",
+      "score_id": "SC42543700",
+      "performance_level": 5,
+      "grade_at_testing": "8",
+      "subject": "Science",
+      "RNVTA_code": "15",
+      "suppression_code": "02",
+      "test_date": "2024-03-18"
+    },
+    {
+      "student_id": "S0747015398",
+      "enrollment_id": "EN36361241",
+      "score_id": "SC87489943",
+      "performance_level": 1,
+      "grade_at_testing": "9",
+      "subject": "Math",
+      "RNVTA_code": "22",
+      "suppression_code": "01",
+      "test_date": "2020-01-15"
+    },
+    {
+      "student_id": "S3811654766",
+      "enrollment_id": "EN56763014",
+      "score_id": "SC96439806",
+      "performance_level": 4,
+      "grade_at_testing": "1",
+      "subject": "Science",
+      "RNVTA_code": "04",
+      "suppression_code": "01",
+      "test_date": "2020-11-15"
+    },
+    {
+      "student_id": "S9920916304",
+      "enrollment_id": "EN34166410",
+      "score_id": "SC58846442",
+      "performance_level": 1,
+      "grade_at_testing": "5",
+      "subject": "Science",
+      "RNVTA_code": "04",
+      "suppression_code": "02",
+      "test_date": "2023-09-16"
+    },
+    {
+      "student_id": "S3341137107",
+      "enrollment_id": "EN25665729",
+      "score_id": "SC17354076",
+      "performance_level": 1,
+      "grade_at_testing": "PK",
+      "subject": "Social Studies",
+      "RNVTA_code": "20",
+      "suppression_code": "",
+      "test_date": "2022-08-22"
+    },
+    {
+      "student_id": "S9476363160",
+      "enrollment_id": "EN15542290",
+      "score_id": "SC38143170",
+      "performance_level": 1,
+      "grade_at_testing": "3",
+      "subject": "Math",
+      "RNVTA_code": "24",
+      "suppression_code": "",
+      "test_date": "2024-03-17"
+    },
+    {
+      "student_id": "S2696517916",
+      "enrollment_id": "EN79012764",
+      "score_id": "SC37758925",
+      "performance_level": 2,
+      "grade_at_testing": "6",
+      "subject": "ELA",
+      "RNVTA_code": "22",
+      "suppression_code": "02",
+      "test_date": "2020-08-08"
+    },
+    {
+      "student_id": "S0422623162",
+      "enrollment_id": "EN32759910",
+      "score_id": "SC40030504",
+      "performance_level": 4,
+      "grade_at_testing": "8",
+      "subject": "Social Studies",
+      "RNVTA_code": "09",
+      "suppression_code": "",
+      "test_date": "2025-06-07"
+    },
+    {
+      "student_id": "S3515038619",
+      "enrollment_id": "EN18194060",
+      "score_id": "SC30190525",
+      "performance_level": 5,
+      "grade_at_testing": "10",
+      "subject": "Science",
+      "RNVTA_code": "13",
+      "suppression_code": "03",
+      "test_date": "2025-01-09"
+    },
+    {
+      "student_id": "S0138284973",
+      "enrollment_id": "EN26714461",
+      "score_id": "SC53939900",
+      "performance_level": 5,
+      "grade_at_testing": "11",
+      "subject": "Science",
+      "RNVTA_code": "18",
+      "suppression_code": "01",
+      "test_date": "2025-01-27"
+    }
+  ],
+  "First Year in U.S. School indicator": [
+    {
+      "student_id": "S1720925043",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "N"
+    },
+    {
+      "student_id": "S6954999034",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "N"
+    },
+    {
+      "student_id": "S6287257217",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S0655156791",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "N"
+    },
+    {
+      "student_id": "S8833901109",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S7282752024",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "N"
+    },
+    {
+      "student_id": "S0747015398",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S3811654766",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S9920916304",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S3341137107",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S9476363160",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S2696517916",
+      "first_year_in_US_flag": "N",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S0422623162",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "N"
+    },
+    {
+      "student_id": "S3515038619",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "Y"
+    },
+    {
+      "student_id": "S0138284973",
+      "first_year_in_US_flag": "Y",
+      "EL_indicator": "N"
+    }
+  ],
+  "Student group classifications (from R004)": [
+    {
+      "student_id": "S1720925043",
+      "all_students_flag": "N",
+      "gender": "Male",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "504_flag": "N",
+      "IEP_flag": "Y",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "N",
+      "EL_flag": "N",
+      "former_EL_flag": "Y",
+      "never_EL_flag": "N",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S6954999034",
+      "all_students_flag": "N",
+      "gender": "Male",
+      "race_ethnicity": "Hispanic or Latino",
+      "504_flag": "N",
+      "IEP_flag": "Y",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "N",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "N",
+      "military_flag": "N",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S6287257217",
+      "all_students_flag": "N",
+      "gender": "Male",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "Y",
+      "EL_flag": "Y",
+      "former_EL_flag": "N",
+      "never_EL_flag": "N",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "N",
+      "military_flag": "Y",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S0655156791",
+      "all_students_flag": "N",
+      "gender": "Non-Binary",
+      "race_ethnicity": "Black or African American",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "N",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "N",
+      "military_flag": "N",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S8833901109",
+      "all_students_flag": "N",
+      "gender": "Male",
+      "race_ethnicity": "Black or African American",
+      "504_flag": "N",
+      "IEP_flag": "N",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S7282752024",
+      "all_students_flag": "Y",
+      "gender": "Non-Binary",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "Y",
+      "former_CWD_flag": "Y",
+      "EL_flag": "Y",
+      "former_EL_flag": "N",
+      "never_EL_flag": "N",
+      "low_income_flag": "N",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S0747015398",
+      "all_students_flag": "Y",
+      "gender": "Female",
+      "race_ethnicity": "Black or African American",
+      "504_flag": "Y",
+      "IEP_flag": "N",
+      "CWD_flag": "N",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "N",
+      "homeless_flag": "N",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "N",
+      "military_flag": "N",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S3811654766",
+      "all_students_flag": "N",
+      "gender": "Non-Binary",
+      "race_ethnicity": "White",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "N",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "N",
+      "homeless_flag": "Y",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "Y",
+      "military_flag": "N",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S9920916304",
+      "all_students_flag": "N",
+      "gender": "Non-Binary",
+      "race_ethnicity": "Two or More Races",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "N",
+      "former_CWD_flag": "N",
+      "EL_flag": "N",
+      "former_EL_flag": "Y",
+      "never_EL_flag": "N",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S3341137107",
+      "all_students_flag": "Y",
+      "gender": "Female",
+      "race_ethnicity": "Hispanic or Latino",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "N",
+      "former_CWD_flag": "N",
+      "EL_flag": "Y",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "Y",
+      "military_flag": "N",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S9476363160",
+      "all_students_flag": "Y",
+      "gender": "Non-Binary",
+      "race_ethnicity": "Two or More Races",
+      "504_flag": "Y",
+      "IEP_flag": "N",
+      "CWD_flag": "N",
+      "former_CWD_flag": "N",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S2696517916",
+      "all_students_flag": "Y",
+      "gender": "Male",
+      "race_ethnicity": "Native Hawaiian or Other Pacific Islander",
+      "504_flag": "N",
+      "IEP_flag": "N",
+      "CWD_flag": "N",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "Y",
+      "never_EL_flag": "N",
+      "low_income_flag": "Y",
+      "homeless_flag": "N",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "N"
+    },
+    {
+      "student_id": "S0422623162",
+      "all_students_flag": "Y",
+      "gender": "Non-Binary",
+      "race_ethnicity": "Two or More Races",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "N",
+      "former_CWD_flag": "N",
+      "EL_flag": "N",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "N",
+      "homeless_flag": "Y",
+      "migrant_flag": "Y",
+      "youth_in_care_flag": "N",
+      "military_flag": "Y",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S3515038619",
+      "all_students_flag": "Y",
+      "gender": "Male",
+      "race_ethnicity": "Asian",
+      "504_flag": "N",
+      "IEP_flag": "N",
+      "CWD_flag": "N",
+      "former_CWD_flag": "Y",
+      "EL_flag": "Y",
+      "former_EL_flag": "N",
+      "never_EL_flag": "Y",
+      "low_income_flag": "N",
+      "homeless_flag": "Y",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "N",
+      "military_flag": "N",
+      "private_school_flag": "Y"
+    },
+    {
+      "student_id": "S0138284973",
+      "all_students_flag": "N",
+      "gender": "Male",
+      "race_ethnicity": "American Indian or Alaska Native",
+      "504_flag": "Y",
+      "IEP_flag": "Y",
+      "CWD_flag": "N",
+      "former_CWD_flag": "Y",
+      "EL_flag": "N",
+      "former_EL_flag": "Y",
+      "never_EL_flag": "Y",
+      "low_income_flag": "N",
+      "homeless_flag": "N",
+      "migrant_flag": "N",
+      "youth_in_care_flag": "Y",
+      "military_flag": "Y",
+      "private_school_flag": "N"
+    }
+  ],
+  "Calculated metric values": [
+    {
+      "metric_id": "M059914",
+      "entity_id": "ENT65992124",
+      "entity_type": "district",
+      "numerator": 394,
+      "denominator": 822,
+      "percentage": 1.78,
+      "count": 398,
+      "metric_type_classification": "Environment"
+    },
+    {
+      "metric_id": "M578582",
+      "entity_id": "ENT37359011",
+      "entity_type": "school",
+      "numerator": 477,
+      "denominator": 398,
+      "percentage": 56.12,
+      "count": 118,
+      "metric_type_classification": "Financial"
+    },
+    {
+      "metric_id": "M716730",
+      "entity_id": "ENT96289553",
+      "entity_type": "state",
+      "numerator": 155,
+      "denominator": 890,
+      "percentage": 3.86,
+      "count": 399,
+      "metric_type_classification": "Financial"
+    },
+    {
+      "metric_id": "M915702",
+      "entity_id": "ENT41672946",
+      "entity_type": "school",
+      "numerator": 447,
+      "denominator": 556,
+      "percentage": 93.38,
+      "count": 422,
+      "metric_type_classification": "Academic Progress"
+    },
+    {
+      "metric_id": "M426037",
+      "entity_id": "ENT91093929",
+      "entity_type": "state",
+      "numerator": 276,
+      "denominator": 387,
+      "percentage": 90.39,
+      "count": 84,
+      "metric_type_classification": "Financial"
+    },
+    {
+      "metric_id": "M307897",
+      "entity_id": "ENT85957167",
+      "entity_type": "district",
+      "numerator": 457,
+      "denominator": 838,
+      "percentage": 60.59,
+      "count": 239,
+      "metric_type_classification": "Student"
+    },
+    {
+      "metric_id": "M926606",
+      "entity_id": "ENT40430944",
+      "entity_type": "district",
+      "numerator": 476,
+      "denominator": 647,
+      "percentage": 33.94,
+      "count": 425,
+      "metric_type_classification": "Academic Progress"
+    },
+    {
+      "metric_id": "M324996",
+      "entity_id": "ENT11627408",
+      "entity_type": "district",
+      "numerator": 5,
+      "denominator": 489,
+      "percentage": 6.14,
+      "count": 5,
+      "metric_type_classification": "Environment"
+    },
+    {
+      "metric_id": "M504241",
+      "entity_id": "ENT44567253",
+      "entity_type": "school",
+      "numerator": 334,
+      "denominator": 614,
+      "percentage": 51.6,
+      "count": 339,
+      "metric_type_classification": "Accountability"
+    },
+    {
+      "metric_id": "M346405",
+      "entity_id": "ENT37171859",
+      "entity_type": "school",
+      "numerator": 74,
+      "denominator": 968,
+      "percentage": 6.69,
+      "count": 23,
+      "metric_type_classification": "Environment"
+    },
+    {
+      "metric_id": "M901033",
+      "entity_id": "ENT12190997",
+      "entity_type": "school",
+      "numerator": 275,
+      "denominator": 118,
+      "percentage": 41.68,
+      "count": 237,
+      "metric_type_classification": "Student"
+    },
+    {
+      "metric_id": "M163708",
+      "entity_id": "ENT75478095",
+      "entity_type": "state",
+      "numerator": 243,
+      "denominator": 500,
+      "percentage": 22.83,
+      "count": 314,
+      "metric_type_classification": "Financial"
+    },
+    {
+      "metric_id": "M314405",
+      "entity_id": "ENT15782238",
+      "entity_type": "school",
+      "numerator": 203,
+      "denominator": 706,
+      "percentage": 97.72,
+      "count": 134,
+      "metric_type_classification": "Environment"
+    },
+    {
+      "metric_id": "M833881",
+      "entity_id": "ENT39392222",
+      "entity_type": "state",
+      "numerator": 401,
+      "denominator": 225,
+      "percentage": 38.97,
+      "count": 219,
+      "metric_type_classification": "Teacher"
+    },
+    {
+      "metric_id": "M430725",
+      "entity_id": "ENT16189199",
+      "entity_type": "district",
+      "numerator": 361,
+      "denominator": 265,
+      "percentage": 51.95,
+      "count": 436,
+      "metric_type_classification": "Academic Progress"
+    }
+  ],
+  "Default grade range from School/District Type": [
+    {
+      "entity_id": "ENT65992124",
+      "school_type": "Elementary",
+      "district_type": "Elementary",
+      "default_grade_low": "PK",
+      "default_grade_high": "8"
+    },
+    {
+      "entity_id": "ENT37359011",
+      "school_type": "High School",
+      "district_type": "High School",
+      "default_grade_low": "3",
+      "default_grade_high": "12"
+    },
+    {
+      "entity_id": "ENT96289553",
+      "school_type": "Elementary",
+      "district_type": "Middle",
+      "default_grade_low": "3",
+      "default_grade_high": "5"
+    },
+    {
+      "entity_id": "ENT41672946",
+      "school_type": "Unit District",
+      "district_type": "Elementary",
+      "default_grade_low": "1",
+      "default_grade_high": "12"
+    },
+    {
+      "entity_id": "ENT91093929",
+      "school_type": "High School",
+      "district_type": "High School",
+      "default_grade_low": "2",
+      "default_grade_high": "12"
+    },
+    {
+      "entity_id": "ENT85957167",
+      "school_type": "High School",
+      "district_type": "Elementary",
+      "default_grade_low": "K",
+      "default_grade_high": "5"
+    },
+    {
+      "entity_id": "ENT40430944",
+      "school_type": "Middle",
+      "district_type": "Middle",
+      "default_grade_low": "1",
+      "default_grade_high": "8"
+    },
+    {
+      "entity_id": "ENT11627408",
+      "school_type": "High School",
+      "district_type": "Elementary",
+      "default_grade_low": "PK",
+      "default_grade_high": "5"
+    },
+    {
+      "entity_id": "ENT44567253",
+      "school_type": "Elementary",
+      "district_type": "Elementary",
+      "default_grade_low": "2",
+      "default_grade_high": "8"
+    },
+    {
+      "entity_id": "ENT37171859",
+      "school_type": "Unit District",
+      "district_type": "High School",
+      "default_grade_low": "PK",
+      "default_grade_high": "12"
+    },
+    {
+      "entity_id": "ENT12190997",
+      "school_type": "Unit District",
+      "district_type": "Elementary",
+      "default_grade_low": "2",
+      "default_grade_high": "5"
+    },
+    {
+      "entity_id": "ENT75478095",
+      "school_type": "Middle",
+      "district_type": "High School",
+      "default_grade_low": "PK",
+      "default_grade_high": "5"
+    },
+    {
+      "entity_id": "ENT15782238",
+      "school_type": "Elementary",
+      "district_type": "Elementary",
+      "default_grade_low": "3",
+      "default_grade_high": "12"
+    },
+    {
+      "entity_id": "ENT39392222",
+      "school_type": "Elementary",
+      "district_type": "Unit District",
+      "default_grade_low": "K",
+      "default_grade_high": "8"
+    },
+    {
+      "entity_id": "ENT16189199",
+      "school_type": "Elementary",
+      "district_type": "Middle",
+      "default_grade_low": "3",
+      "default_grade_high": "12"
+    }
+  ]
+}

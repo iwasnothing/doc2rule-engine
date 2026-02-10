@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100%;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#4CAF50", "id": "R001", "label": "R001\nGrades Served", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR001 \u2013 Grades Served\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Retrieve grade levels offered by the school from EPS.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Grade levels served by the school (e.g., PK\u201312).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4FC3F7", "id": "R002", "label": "R002\nReport Card Eligible Entity", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR002 \u2013 Report Card Eligible Entity\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Evaluate entity category, enrollment thresholds, and RCDTS codes to determine report card eligibility.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Binary flag: entity is eligible (Yes/No) to receive a Report Card.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#81C784", "id": "R003", "label": "R003\nResponsible Entity Assignment", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR003 \u2013 Responsible Entity Assignment\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e student\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Assign each student to a responsible school and responsible district based on home/serving school and cooperative exceptions.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Each student has a designated responsible school and responsible district for all Report Card metrics.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#81C784", "id": "R004", "label": "R004\nStudent Groups Classification", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR004 \u2013 Student Groups Classification\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e student\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Classify each student into one or more demographic/program groups based on SIS data, snapshots, and external files.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Student group flags assigned: All Students, Gender, Race, 504, IEP, CWD, Former CWD, EL, Former EL, Never EL, Low Income, Homeless, Migrant, Youth In Care, Military, Private School.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#4FC3F7", "id": "R006", "label": "R006\nProficiency Rate \u2013 All Tests (ELA, Math, Science)", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR006 \u2013 Proficiency Rate \u2013 All Tests (ELA, Math, Science)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate proficiency rate: (Number proficient) \u00f7 (Number with valid scores excluding suppressed) \u00d7 100. Also calculate Federal 95% Rule proficiency rate when applicable.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Proficiency rate (%) for ELA, Math, and Science across all tests at school, district, and state level, disaggregated by student groups and grade.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#4FC3F7", "id": "R026", "label": "R026\nStudent Enrollment", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR026 \u2013 Student Enrollment\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Count distinct students by entity. Calculate total enrollment and disaggregated counts/percentages by grade and demographic group. Percent = (group count \u00f7 entity enrollment) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Total enrollment and disaggregated counts/percentages (race, gender, EL, IEP, Low Income, Homeless) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#4FC3F7", "id": "R035", "label": "R035\nSummative Designation \u2013 CCRI Meta Indicator Components", "shape": "ellipse", "size": 20, "title": "\u003cb\u003eR035 \u2013 Summative Designation \u2013 CCRI Meta Indicator Components\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e For each CCRI component: (Graduates meeting requirement) \u00f7 (Total graduates) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Percentage of graduates meeting each CCRI component (attendance, GPA, SAT/ACT minimum, Academic ELA, Academic Math, Career Area, Career Ready count, Pathway Endorsement).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e \u003cbr\u003e"}, {"color": "#E53935", "id": "R005", "label": "R005\nData Display and Redaction", "shape": "box", "size": 30, "title": "\u003cb\u003eR005 \u2013 Data Display and Redaction\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Apply redaction rules to each calculated metric value based on entity type, metric type, numerator/denominator thresholds.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Each metric value is either displayed, shown as \u0027Redacted\u0027/\u0027*\u0027, or shown as \u0027No Data Available\u0027.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e FINAL\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R007", "label": "R007\nProficiency Rate \u2013 DLM-AA (ELA, Math, Science)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR007 \u2013 Proficiency Rate \u2013 DLM-AA (ELA, Math, Science)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate proficiency rate: (Students at Level 3 or 4) \u00f7 (Students with valid scores excluding suppressed) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e DLM-AA proficiency rate (%) for ELA, Math, and Science, disaggregated by student groups.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R008", "label": "R008\nProficiency Rate \u2013 SAT (ELA and Math)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR008 \u2013 Proficiency Rate \u2013 SAT (ELA and Math)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate proficiency rate and average SAT score for ELA and Math separately. Average Score = sum(valid scores) \u00f7 count(valid scores). Composite average includes only students with both unsuppressed ELA and Math.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e SAT proficiency rate (%) and average score for ELA, Math, and Composite.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R009", "label": "R009\nProficiency Rate \u2013 ISA (Science)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR009 \u2013 Proficiency Rate \u2013 ISA (Science)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate proficiency rate: (Students at Level 3 or 4) \u00f7 (Students with valid scores) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e ISA Science proficiency rate (%) for Grades 5, 8, 11 disaggregated by student groups.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R010", "label": "R010\nProficiency Rate and Student Growth Percentile \u2013 IAR (ELA and Math)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR010 \u2013 Proficiency Rate and Student Growth Percentile \u2013 IAR (ELA and Math)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate proficiency rate: (Students at Level 4 or 5) \u00f7 (Students with valid scores excluding suppressed) \u00d7 100. Calculate SGP: mean of individual SGPs at entity level.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e IAR proficiency rate (%) and average Student Growth Percentile for ELA and Math, disaggregated by student groups.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R011", "label": "R011\nParticipation Rate and No Participation Rate \u2013 All Tests (ELA, Math, Science)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR011 \u2013 Participation Rate and No Participation Rate \u2013 All Tests (ELA, Math, Science)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Participation Rate = (Students with Y in Participation Numerator) \u00f7 (Students with Y in Participation Denominator) \u00d7 100. No Participation Rate = (Students with N in Numerator) \u00f7 (Students with Y in Denominator) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Participation rate (%) and No Participation rate (%) for each subject and test type at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R013", "label": "R013\nState Performance Plan (SPP) Indicators 1\u201314", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR013 \u2013 State Performance Plan (SPP) Indicators 1\u201314\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e district\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e For each indicator, compare district metric to state target/standard. Determine \u0027District Met State Target\u0027 (YES/NO/N/A).\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e SPP Indicator status (Met/Not Met/N/A) for each of the 14 indicators at district level.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R014", "label": "R014\nEighth Graders Passing Algebra I", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR014 \u2013 Eighth Graders Passing Algebra I\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e student\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate rate: (8th graders who passed Algebra I or equivalent or are enrolled in a course requiring Algebra I) \u00f7 (Total qualified 8th grade students) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Percentage of 8th graders passing Algebra I at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R015", "label": "R015\n9th Grade on Track", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR015 \u2013 9th Grade on Track\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e student\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate rate: (Students passing \u003e= 5 credits without failing \u003e 0.5 credits in core) \u00f7 (Total qualified first-time 9th graders) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e 9th Grade on Track rate (%) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R016", "label": "R016\nCareer and Technical Education (CTE)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR016 \u2013 Career and Technical Education (CTE)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e student\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Count CTE participants, concentrators, and exiting concentrators. Calculate Perkins measures (graduation rates, proficiency rates, postsecondary placement, nontraditional enrollment, dual credit/work-based learning). Aggregate by cluster and program.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e CTE enrollment counts, participant/concentrator/exiting counts by cluster; Perkins performance measures at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R017", "label": "R017\nAdvanced Placement (AP) Exam Passing Requirements", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR017 \u2013 Advanced Placement (AP) Exam Passing Requirements\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate four metrics: Students Taking 1+ AP Exams (distinct count by grade), Students Eligible for College Credit on 1+ AP Exams (score \u003e= 3), Total AP Exams Taken (career count), Total AP Exams Eligible for College Credit.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e AP exam participation and passing counts by grade at school level.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R018", "label": "R018\nPostsecondary Enrollment", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR018 \u2013 Postsecondary Enrollment\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate 12-month and 16-month postsecondary enrollment rates: (Graduates enrolled in college within timeframe) \u00f7 (Total graduates) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Postsecondary enrollment rate (%) at 12 and 16 months, by institution type (2-year, 4-year, trade) and sector (public, private).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R019", "label": "R019\nPostsecondary Course Remediation", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR019 \u2013 Postsecondary Course Remediation\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Community College Remediation = (Students with \u003e= 0.5 remedial credit) \u00f7 (Students attending ICCB institution) \u00d7 100. Postsecondary Remediation = (Students enrolled in remedial courses) \u00f7 (Students attending IBHE institution) \u00d7 100. Repeat per subject.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Community College and Postsecondary remediation rates (%) overall and by subject.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R020", "label": "R020\nGraduation Rate (4-Year, 5-Year, 6-Year Adjusted Cohort)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR020 \u2013 Graduation Rate (4-Year, 5-Year, 6-Year Adjusted Cohort)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Graduation Rate = (Graduates) \u00f7 (Graduates + Non-Graduates) \u00d7 100. Non-Graduates = all students not coded 06 and not excluded.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e 4-year, 5-year, and 6-year adjusted cohort graduation rates (%) and student counts at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R021", "label": "R021\nEarly Learning \u2013 KIDS (Kindergarten Readiness)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR021 \u2013 Early Learning \u2013 KIDS (Kindergarten Readiness)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e district\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate participation rate, readiness rates (0, 1, 2, 3 areas), and readiness per developmental area. Each = (numerator) \u00f7 (denominator) \u00d7 100, rounded to nearest whole percent.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e KIDS participation rate (%) and kindergarten readiness rates (%) by developmental area at district and state, disaggregated by student groups.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R022", "label": "R022\nClimate Survey (5Essentials / Cognia / CSCI)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR022 \u2013 Climate Survey (5Essentials / Cognia / CSCI)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate student and teacher response rates. District % schools over 50% = (schools with both rates \u003e 50%) \u00f7 (eligible schools). Display 5Essentials component levels at school.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Climate survey response rates and 5Essentials component ratings at school; district-level % of schools over 50%.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R027", "label": "R027\nEnglish Learners (EL)", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR027 \u2013 English Learners (EL)\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate EL counts and percentages, exit count/rate, ACCESS participation rate, performance level distribution, long-term EL count, transition and outcome status.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e EL count/%, exit rate, ACCESS participation and performance, long-term EL, transition/outcome at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R028", "label": "R028\nAdvanced Academic Program", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR028 \u2013 Advanced Academic Program\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Count and calculate percentages for each category: Accelerated (by type), AP coursework, IB coursework, Enriched/Honors, Dual-Credit, Gifted (assessed, identified, taught by endorsed teacher).\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Advanced academic program counts and percentages at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R029", "label": "R029\nIEP Students \u2013 Education Environment", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR029 \u2013 IEP Students \u2013 Education Environment\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e district\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate IEP distribution by race and disability (%). Calculate education environment percentages overall and by race/disability.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e IEP by race/disability distribution and education environment percentages at district and state with peer comparison.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R030", "label": "R030\nStudent Attendance Rate and Chronic Absenteeism", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR030 \u2013 Student Attendance Rate and Chronic Absenteeism\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate Total School Days, Student Attendance Rate = (Days Present) \u00f7 (Total Attendance Days) \u00d7 100. Chronic Truancy Rate = (Students with \u003e= 5% unexcused) \u00f7 (All eligible students) \u00d7 100. Chronic Absentee Rate = (Students with \u003e= 10% total absences) \u00f7 (All eligible students) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Total school days, student attendance rate (%), chronic truancy rate (%), chronic absentee rate (%), truancy rate (%) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R031", "label": "R031\nStudent Mobility Rate", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR031 \u2013 Student Mobility Rate\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Mobility Rate = (Unduplicated mobile students) \u00f7 (Unduplicated students enrolled Oct 1\u2013May 1 excluding exits 06/15) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Student mobility rate (%) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R032", "label": "R032\nDropout Rate", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR032 \u2013 Dropout Rate\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Dropout Rate = (Dropout students + Prior year cohort not enrolled) \u00f7 (All students for reporting year + Prior year cohort not enrolled) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Dropout rate (%) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R033", "label": "R033\nStudent Discipline Data", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR033 \u2013 Student Discipline Data\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Count distinct students with discipline and total incidents by action code. Disaggregate by discipline action, gender, race, grade band (K\u20138, 9\u201312), program (EL, FRL, IEP), incident type, and duration buckets.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Discipline counts and rates at school, district, state, disaggregated by demographics and incident type.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#E53935", "id": "R039", "label": "R039\nSchool Improvement In Arrears", "shape": "box", "size": 30, "title": "\u003cb\u003eR039 \u2013 School Improvement In Arrears\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Determine school improvement status based on Summative Designation and carry-over logic. Display associated grant amounts.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e School improvement status (Comprehensive, Targeted, Additional Targeted, or None) and associated grant amounts.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e FINAL\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R036", "label": "R036\nSummative Designation \u2013 Fine Arts Meta Indicator Components", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR036 \u2013 Summative Designation \u2013 Fine Arts Meta Indicator Components\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Student Participation = (Students in 1+ fine arts course) \u00f7 (Total students at school) \u00d7 100. Teacher Qualifications = (Students in arts course taught by qualified teacher) \u00f7 (Students in 1+ arts course) \u00d7 100.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Fine arts student participation (%) and qualified teacher rate (%).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R037", "label": "R037\nSummative Designation \u2013 P-2 Meta Indicator Components", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR037 \u2013 Summative Designation \u2013 P-2 Meta Indicator Components\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate each P-2 component percentage using the applicable grade/student subset and criteria.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e P-2 meta indicator component percentages (chronic absenteeism, dual language, 3rd grade literacy).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R038", "label": "R038\nSummative Designation \u2013 Elementary/Middle Meta Indicator Components", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR038 \u2013 Summative Designation \u2013 Elementary/Middle Meta Indicator Components\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Calculate each Elementary/Middle component percentage using the applicable grade/student subset.\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Elementary/Middle meta indicator component percentages (5th grade math, middle school success, middle school discipline).\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}, {"color": "#4CAF50", "id": "R041", "label": "R041\nAverage Class Size", "shape": "diamond", "size": 30, "title": "\u003cb\u003eR041 \u2013 Average Class Size\u003c/b\u003e\u003cbr\u003e\u003cb\u003eEntity:\u003c/b\u003e school\u003cbr\u003e\u003cb\u003eAction:\u003c/b\u003e Average Class Size = Sum(section enrollments) \u00f7 Sum(number of sections).\u003cbr\u003e\u003cb\u003eOutcome:\u003c/b\u003e Average class size (and by grade level where applicable) at school, district, state.\u003cbr\u003e\u003cb\u003eType:\u003c/b\u003e ROOT\u003cbr\u003e"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "#FFD600", "from": "R001", "label": "Grades determined", "title": "Grades determined", "to": "R002", "width": 3.5}, {"arrows": "to", "color": "#FFD600", "from": "R002", "label": "School is eligible", "title": "School is eligible", "to": "R003", "width": 3.5}, {"arrows": "to", "color": "#FFD600", "from": "R003", "label": "Responsible entity assigned", "title": "Responsible entity assigned", "to": "R004", "width": 3.5}, {"arrows": "to", "color": "#FFD600", "from": "R004", "label": "Student groups assigned for assessment metrics", "title": "Student groups assigned for assessment metrics", "to": "R006", "width": 3.5}, {"arrows": "to", "color": "#888888", "from": "R004", "label": "Student groups assigned for enrollment metrics", "title": "Student groups assigned for enrollment metrics", "to": "R026", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R004", "label": "Student groups assigned for accountability", "title": "Student groups assigned for accountability", "to": "R035", "width": 1.5}, {"arrows": "to", "color": "#FFD600", "from": "R006", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 3.5}, {"arrows": "to", "color": "#FFD600", "from": "R006", "label": "Feeds into Summative Designation", "title": "Feeds into Summative Designation", "to": "R035", "width": 3.5}, {"arrows": "to", "color": "#888888", "from": "R026", "label": "Counts calculated", "title": "Counts calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#FFD600", "from": "R035", "label": "Components calculated", "title": "Components calculated", "to": "R005", "width": 3.5}, {"arrows": "to", "color": "#FFD600", "from": "R035", "label": "Feeds into School Improvement determination", "title": "Feeds into School Improvement determination", "to": "R039", "width": 3.5}, {"arrows": "to", "color": "#888888", "from": "R007", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R008", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R009", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R010", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R010", "label": "Feeds into Summative Designation", "title": "Feeds into Summative Designation", "to": "R035", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R011", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R011", "label": "Participation \u003c 95% triggers Federal 95% Rule", "title": "Participation \u003c 95% triggers Federal 95% Rule", "to": "R006", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R013", "label": "Status determined", "title": "Status determined", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R014", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R015", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R016", "label": "Counts and rates calculated", "title": "Counts and rates calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R017", "label": "Counts calculated", "title": "Counts calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R018", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R019", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R020", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R020", "label": "Feeds into Summative Designation", "title": "Feeds into Summative Designation", "to": "R035", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R021", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R022", "label": "Rates calculated", "title": "Rates calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R027", "label": "Counts calculated", "title": "Counts calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R028", "label": "Counts calculated", "title": "Counts calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R029", "label": "Percentages calculated", "title": "Percentages calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R030", "label": "Rates calculated", "title": "Rates calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R030", "label": "Chronic absenteeism feeds Summative Designation", "title": "Chronic absenteeism feeds Summative Designation", "to": "R035", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R031", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R032", "label": "Rate calculated", "title": "Rate calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R033", "label": "Counts calculated", "title": "Counts calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R036", "label": "Components calculated", "title": "Components calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R037", "label": "Components calculated", "title": "Components calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R038", "label": "Components calculated", "title": "Components calculated", "to": "R005", "width": 1.5}, {"arrows": "to", "color": "#888888", "from": "R041", "label": "Value calculated", "title": "Value calculated", "to": "R005", "width": 1.5}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"layout": {"hierarchical": {"enabled": true, "direction": "UD", "sortMethod": "directed", "levelSeparation": 200, "nodeSpacing": 250}}, "physics": {"hierarchicalRepulsion": {"nodeDistance": 250}}, "edges": {"arrows": {"to": {"enabled": true}}, "font": {"size": 10, "align": "middle"}, "smooth": {"type": "cubicBezier"}}, "nodes": {"font": {"size": 12, "face": "arial"}, "borderWidth": 2}, "interaction": {"hover": true, "tooltipDelay": 100}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
