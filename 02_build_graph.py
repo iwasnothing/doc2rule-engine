@@ -1,22 +1,27 @@
 """
-Build a directed graph from rules.json using NetworkX and visualise it
+Build a directed graph from a rules JSON file using NetworkX and visualise it
 with pyvis, exporting to an interactive HTML file.
 
 Root nodes (no incoming edges) are coloured GREEN.
 Final nodes (is_final=true) are coloured RED.
+All other nodes use a neutral default colour.
 The top-3 longest paths are printed and exported as a single combined
 sub-graph HTML file that also includes every node directly connected to
 the path nodes.
 
 Usage:
     pip install networkx pyvis
-    python 02_build_graph.py
+    python 02_build_graph.py <path/to/rules.json>
 
 Output:
-    rules_graph.html                   – full interactive graph
-    rules_subgraph_top3_combined.html  – combined sub-graph of top-3 paths + neighbours
+    <prefix>_graph.html                   – full interactive graph
+    <prefix>_subgraph_top3_combined.html  – combined sub-graph of top-3 paths + neighbours
+    <prefix>_starting_order.json          – starting rules (root nodes) ordered by rule_id ascending
+
+    where <prefix> is the filename stem of the input rules file (e.g. rules.json → rules).
 """
 
+import argparse
 import json
 from pathlib import Path
 
@@ -26,14 +31,7 @@ from pyvis.network import Network
 # ── Colour constants ──────────────────────────────────────────────────────────
 ROOT_COLOUR = "#4CAF50"     # green  – root nodes (in-degree == 0)
 FINAL_COLOUR = "#E53935"    # red    – is_final nodes
-ENTITY_COLOURS = {
-    "school": "#4FC3F7",    # light blue
-    "student": "#81C784",   # light green
-    "district": "#FFB74D",  # orange
-    "teacher": "#CE93D8",   # purple
-    "state": "#E57373",     # salmon
-}
-DEFAULT_COLOUR = "#B0BEC5"  # grey fallback
+DEFAULT_COLOUR = "#B0BEC5"  # grey   – all other nodes
 PATH_HIGHLIGHT = "#FFD600"  # yellow – edges on the highlighted path
 
 
@@ -78,14 +76,14 @@ def build_networkx_graph(rules: list[dict]) -> nx.DiGraph:
 def node_colour(G: nx.DiGraph, node_id: str) -> str:
     """Return the display colour for a node.
 
-    Priority: root (green) > final (red) > entity colour.
+    Priority: root (green) > final (red) > default grey.
     """
     attrs = G.nodes[node_id]
     if G.in_degree(node_id) == 0:
         return ROOT_COLOUR
     if attrs.get("is_final", False):
         return FINAL_COLOUR
-    return ENTITY_COLOURS.get(attrs.get("entity", ""), DEFAULT_COLOUR)
+    return DEFAULT_COLOUR
 
 
 def node_shape(G: nx.DiGraph, node_id: str) -> str:
@@ -293,6 +291,14 @@ def print_summary(G: nx.DiGraph) -> None:
     print("=" * 70)
 
 
+def export_starting_rule_order(G: nx.DiGraph, output_path: str) -> None:
+    """Export the starting rules (root nodes) as a JSON list sorted by rule_id ascending."""
+    roots = sorted(n for n in G.nodes if G.in_degree(n) == 0)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(roots, f, indent=2)
+    print(f"Starting rule order → {output_path}")
+
+
 def print_top_paths(paths: list[list[str]], G: nx.DiGraph) -> None:
     print()
     print("TOP-3 LONGEST ROOT→LEAF PATHS")
@@ -306,24 +312,51 @@ def print_top_paths(paths: list[list[str]], G: nx.DiGraph) -> None:
 
 # ── main ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    base = Path(__file__).parent
-    rules_path = base / "rules.json"
+    parser = argparse.ArgumentParser(
+        description="Build a directed graph from a rules JSON file.",
+    )
+    parser.add_argument(
+        "rules_file",
+        type=str,
+        help="Path to the rules JSON file (e.g. rules.json)",
+    )
+    args = parser.parse_args()
+
+    rules_path = Path(args.rules_file)
+    base = rules_path.parent
+    prefix = rules_path.stem
 
     rules = load_rules(rules_path)
     G = build_networkx_graph(rules)
 
+    # Detect and report cycles in the graph
+    try:
+        cycles = list(nx.simple_cycles(G))
+        if cycles:
+            print(f"\n⚠️  WARNING: {len(cycles)} cycle(s) detected in the rule graph:")
+            for cyc in cycles[:10]:
+                print(f"    {' -> '.join(cyc)} -> {cyc[0]}")
+            if len(cycles) > 10:
+                print(f"    ... and {len(cycles) - 10} more")
+            print()
+    except Exception:
+        pass  # cycle detection may fail on very large graphs
+
     print_summary(G)
 
     # ── Top-3 longest paths ───────────────────────────────────────────────
-    top3 = top_k_longest_paths(G, k=3)
-    print_top_paths(top3, G)
+    #top3 = top_k_longest_paths(G, k=3)
+    #print_top_paths(top3, G)
 
     # ── Export full graph ─────────────────────────────────────────────────
-    export_full_graph(G, str(base / "rules_graph.html"))
+    export_full_graph(G, str(base / f"{prefix}_graph.html"))
+
+    # ── Export starting rule order (root nodes by rule_id ascending) ───────
+    export_starting_rule_order(G, str(base / f"{prefix}_starting_order.json"))
 
     # ── Export combined sub-graph for the top-3 paths + neighbours ───────
-    if top3:
-        export_combined_subgraph(
-            G, top3,
-            str(base / "rules_subgraph_top3_combined.html"),
-        )
+    #if top3:
+    #    export_combined_subgraph(
+    #        G, top3,
+    #        str(base / f"{prefix}_subgraph_top3_combined.html"),
+    #    )
